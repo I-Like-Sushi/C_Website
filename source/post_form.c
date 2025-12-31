@@ -1,0 +1,34 @@
+#include "../include/post_form.h"
+
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+
+char *return_value_after_amp(char *old_value) {
+    char *amp = strchr(old_value, '&');
+    if (amp) {
+        *amp = '\0';        // terminate the first value
+        return amp + 1;     // return pointer to rest of body
+    }
+    return NULL;            // no '&' found
+}
+
+size_t parse_form(char *body, Key_value *key_value, size_t max_fields) {
+    size_t count = 0;
+
+    char *pair = strtok(body, "&");
+    while (pair && count < max_fields) {
+        char *eq = strchr(pair, '=');
+        if (eq) {
+            *eq = '\0';                         // split "key=value" into two C-strings
+            key_value[count].key = pair;        // key points to start of token
+            key_value[count].value = eq + 1;    // value points after '='
+            key_value[count].element = count;
+            count++;
+        }
+        pair = strtok(NULL, "&");
+    }
+
+    return count;
+
+}

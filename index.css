@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: purple;
+}
+
+#linkTest {
+    font-size: 50px;
+    color: blue;
+}
