@@ -65,7 +65,7 @@ int main(void) {
     curl_easy_setopt(curl, CURLOPT_URL,
         "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true");
 
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, got_data);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);
 
     curl_result = curl_easy_perform(curl);
@@ -78,6 +78,41 @@ int main(void) {
     printf("API Response:\n%s\n", response);
 
     curl_easy_cleanup(curl);
+
+
+
+    cJSON *json = cJSON_Parse(response);
+    if (json == NULL) {
+        const char *error_ptr = cJSON_GetErrorPtr();
+        if (error_ptr != NULL) {
+            printf("Error: %s\n", error_ptr);
+        }
+        cJSON_Delete(json);
+    }
+
+    cJSON *current_weather = cJSON_GetObjectItemCaseSensitive(json, "current_weather");
+
+    if (!cJSON_IsObject(current_weather)) {
+        printf("Error: current_weather not found or not an object\n");
+        cJSON_Delete(json);
+    }
+
+    cJSON *temperature = cJSON_GetObjectItemCaseSensitive(current_weather, "temperature");
+    if (cJSON_IsNumber(temperature)) {
+        printf("Current Temperature: %.2f°C\n", temperature->valuedouble);
+    } else {
+        printf("Error: temperature is missing or not a number\n");
+    }
+
+    cJSON_Delete(json);
+
+
+
+
+
+
+
+
 
 
     /////////////////////

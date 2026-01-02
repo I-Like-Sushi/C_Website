@@ -36,6 +36,10 @@ nav {
     color: darkgoldenrod;
 }
 
+p {
+    color: white;
+}
+
 header {
     flex: 1;
 }
