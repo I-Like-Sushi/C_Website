@@ -1,12 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+/* Merryweather
+   Quicksand
+   Libre Baskerville
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    padding: 10px;
+    border: 3px dashed green;
+    text-align: center;
+}
+
+.nav-link {
+    font-family: "Exo 2", sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    border: 3px dashed blue;
+    margin: 20px;
+}
+
+.nav-link:hover {
+    color: darkgoldenrod;
+}
+
+header {
+    flex: 1;
+}
+
+.header-outer-container {
+    /* keep as a normal block wrapper */
+    width: 100%;
+    min-height: 100vh;
+    padding: 2.4rem;
+    border: 3px dashed #ff3ca6;
+}
+
+.header-inner-container {
+    height: 100%;
+    max-width: 980px;   /* control how wide the content can grow */
+    margin: 0 auto;     /* centers horizontally */
+    border: 3px dashed goldenrod;
+    display: flex;      /* optional: keep inner layout flexible */
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#C_logo {
+    border: 3px dashed grey;
+    height: 20%;
+    width: 20%;
 }
 
 h1 {
-    color: purple;
+    color: white;
+    font-family: "Exo 2", sans-serif;
 }
 
-#linkTest {
-    font-size: 50px;
-    color: blue;
+h6 {
+    color: white;
 }
+
+footer {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    border-block: 3px dashed;
+    border-color: darkred;
+}
+
+/* Neon City static background */
+:root{
+    --bg-top:#0b0026;
+    --bg-bottom:#1b0044;
+    --neon-pink:#ff3ca6;
+    --neon-purple:#6b2cff;
+    --horizon-pink:rgba(255,60,166,0.12);
+    --horizon-purple:rgba(107,44,255,0.06);
+}
+
+/* Apply to a wrapper or body */
+.neon-background,
+.neon-background::before,
+.neon-background::after{
+    box-sizing:border-box;
+}
+
+/* main background canvas */
+.neon-background{
+    position:relative;
+    min-height:100vh;
+    width:100%;
+    background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-bottom) 100%);
+    background-attachment:fixed;
+    overflow:hidden;
+}
+
+/* soft cloud bands (static glow shapes) */
+.neon-background::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:6vmin;
+    transform:translateX(-50%);
+    width:140vmin;
+    height:36vmin;
+    pointer-events:none;
+    background:
+            radial-gradient(60% 40% at 20% 30%, rgba(255,120,180,0.06), transparent 18%),
+            radial-gradient(60% 40% at 80% 50%, rgba(107,44,255,0.04), transparent 20%);
+    filter:blur(28px);
+    mix-blend-mode:screen;
+    z-index:0;
+    border-radius:50%;
+}
+
+/* horizon glow */
+.neon-background::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:6vmin;
+    height:10vmin;
+    pointer-events:none;
+    background:
+            radial-gradient(60% 40% at 50% 100%, var(--horizon-pink), transparent 40%),
+            radial-gradient(40% 20% at 50% 80%, var(--horizon-purple), transparent 30%);
+    mix-blend-mode:screen;
+    z-index:0;
+}
+
+/* helper: ensure page content sits above decorative layers */
+.neon-background > * { position:relative; z-index:1; }

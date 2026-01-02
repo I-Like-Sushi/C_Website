@@ -5,4 +5,6 @@
 
 void send_txt_file(SOCKET Client, const char *file, const char *type_of_file);
 
+void send_image_file(SOCKET Client, const char *file, const char *type_of_file);
+
 #endif

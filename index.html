@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My title</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css"/>
 </head>
-<body>
+<body class="neon-background">
 <nav>
-    <a href="https://www.w3schools.com/" id="linkTest" target="_blank">Link test</a>
+    <a href="https://www.w3schools.com/" class="nav-link" id="nav-link1" target="_blank">Link test</a>
+    <a href="https://www.w3schools.com/" class="nav-link" id="nav-link2" target="_blank">Link test</a>
+    <a href="https://www.w3schools.com/" class="nav-link" id="nav-link3" target="_blank">Link test</a>
 </nav>
 <header>
-    <h1>Testing page</h1>
+    <div class="header-outer-container">
+        <div class="header-inner-container">
+            <h1>Hello, I'm {{name}}. And I made this website with </h1>
+            <div class="c-image-div">
+                <img src="source/img/The_C_Programming_Language_logo.svg" id="C_logo" alt="C logo image"/>
+            </div>
+        </div>
+    </div>
 </header>
 <footer>
     <a href="/profilePage" id="profilePageLink">Profile link test</a>
