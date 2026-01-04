@@ -2,8 +2,11 @@
 #define EDIT_TEXT_HTML
 
 #include <winsock2.h>
+#include <stdio.h>
 
-void replace_html_text(SOCKET client, char *html_file, char *type_of_file, char *old_value, char *new_value);
-
+void replace_in_file_to(const char *template_path,
+                        const char *output_path,
+                        const char *placeholder,
+                        const char *replacement);
 
 #endif

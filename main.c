@@ -62,6 +62,11 @@ int main(void) {
     char response[8192] = {0};
 
     curl_easy_setopt(curl, CURLOPT_CAINFO, "cacert.pem");
+
+    /////////////////
+    /// Todo: Get current weather at location of user.
+    /////////////////
+
     curl_easy_setopt(curl, CURLOPT_URL,
         "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true");
 
@@ -78,8 +83,6 @@ int main(void) {
     printf("API Response:\n%s\n", response);
 
     curl_easy_cleanup(curl);
-
-
 
     cJSON *json = cJSON_Parse(response);
     if (json == NULL) {
@@ -114,7 +117,6 @@ int main(void) {
 
 
 
-
     /////////////////////
 
 
@@ -129,9 +131,15 @@ int main(void) {
             perror("recv failed");
         }
 
+        char temp_str[15];
+
+        snprintf(temp_str, sizeof(temp_str), "%.2f°C", temperature->valuedouble);
+
         // GET
         if (strncmp(buffer, "GET /homepage", 13) == 0) {
-            send_txt_file(Client, "..//index.html", "html");
+            replace_in_file_to("..//index.html", "..//new_html.html", "{{name}}", "Your name");
+            replace_in_file_to("..//new_html.html" ,"..//new_html.html", "{{weather}}", temp_str);
+            send_txt_file(Client, "..//new_html.html", "html");
         } else if (strncmp(buffer, "GET /index.css", 14) == 0) {
             send_txt_file(Client, "..//index.css", "css");
         } else if (strncmp(buffer, "GET /source/img/The_C_Programming_Language_logo.svg", 51) == 0) {
@@ -176,7 +184,7 @@ int main(void) {
                 last_name = form[1].value;
             }
 
-            replace_html_text(Client, "..//routes//profilePage//profilePage.html", "html", "{{name}}", first_name);
+            // replace_html_text(Client, "..//routes//profilePage//profilePage.html", "html", "{{name}}", first_name);
 
             closesocket(Client);
 
