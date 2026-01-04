@@ -109,7 +109,8 @@ footer {
     width:100%;
     background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-bottom) 100%);
     background-attachment:fixed;
-    overflow:hidden;
+    overflow-x: hidden; /* hide horizontal overflow */
+    overflow-y: visible; /* allow vertical growth */
 }
 
 /* soft cloud bands (static glow shapes) */
