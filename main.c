@@ -68,7 +68,7 @@ int main(void) {
     /////////////////
 
     curl_easy_setopt(curl, CURLOPT_URL,
-        "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true");
+        "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true&hourly=precipitation,rain,showers,precipitation_probability");
 
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);
@@ -148,17 +148,17 @@ int main(void) {
 
 
         else if (strncmp(buffer, "GET /profilePage.css", 20) == 0) {
-            send_txt_file(Client, "..//routes//profilePage//profilePage.css", "css");
+            send_txt_file(Client, "..//route//profilePage//profilePage.css", "css");
         } else if (strncmp(buffer, "GET /profilePage", 16) == 0) {
-            send_txt_file(Client, "..//routes//profilePage//profilePage.html", "html");
+            send_txt_file(Client, "..//route//profilePage//profilePage.html", "html");
         } else if (strncmp(buffer, "GET /contact.css", 16) == 0) {
-            send_txt_file(Client, "..//routes//contact//contact.css", "css");
+            send_txt_file(Client, "..//route//contact//contact.css", "css");
         } else if (strncmp(buffer, "GET /contact-page", 17) == 0) {
-            send_txt_file(Client, "..//routes//contact//contact.html", "html");
+            send_txt_file(Client, "..//route//contact//contact.html", "html");
         } else if (strncmp(buffer, "GET /weather.css", 16) == 0) {
-            send_txt_file(Client, "..//routes//weather//weather.css", "css");
+            send_txt_file(Client, "..//route//weather//weather.css", "css");
         } else if (strncmp(buffer, "GET /weather", 12) == 0) {
-            send_txt_file(Client, "..//routes//weather//weather.html", "html");
+            send_txt_file(Client, "..//route//weather//weather.html", "html");
         }
 
 
@@ -184,16 +184,16 @@ int main(void) {
                 last_name = form[1].value;
             }
 
-            // replace_html_text(Client, "..//routes//profilePage//profilePage.html", "html", "{{name}}", first_name);
+            // replace_html_text(Client, "..//route//profilePage//profilePage.html", "html", "{{name}}", first_name);
 
             closesocket(Client);
 
         }
 
         else if (strncmp(buffer, "GET /errorPage.css", 18) == 0) {
-            send_txt_file(Client, "..//routes//errorPage//errorPage.css", "css");
+            send_txt_file(Client, "..//route//errorPage//errorPage.css", "css");
         } else {
-            send_txt_file(Client, "..//routes//errorPage//errorPage.html", "html");
+            send_txt_file(Client, "..//route//errorPage//errorPage.html", "html");
         }
 
     }
