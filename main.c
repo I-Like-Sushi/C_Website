@@ -20,6 +20,8 @@
 
 #pragma comment(lib, "WS2_32.lib")
 
+///////////////////// Make everything one page /////////////////////
+
 int main(void) {
 
     WSADATA data;
@@ -68,7 +70,7 @@ int main(void) {
     /////////////////
 
     curl_easy_setopt(curl, CURLOPT_URL,
-        "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true&hourly=precipitation,rain,showers,precipitation_probability");
+        "https://api.open-meteo.com/v1/forecast?latitude=52.37&longitude=4.89&current_weather=true");
 
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);
@@ -110,10 +112,10 @@ int main(void) {
     cJSON_Delete(json);
 
 
+    /////////////////////
 
-
-
-
+    struct sockaddr_in sa = {0};
+    socklen_t socklen =
 
 
 

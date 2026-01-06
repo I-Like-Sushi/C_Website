@@ -40,6 +40,10 @@ p {
     color: white;
 }
 
+#section-this-website {
+    background-color: #00eaff;
+}
+
 header {
     flex: 1;
 }
