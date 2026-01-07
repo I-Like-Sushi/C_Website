@@ -114,8 +114,8 @@ int main(void) {
 
     /////////////////////
 
-    struct sockaddr_in sa = {0};
-    socklen_t socklen =
+    // struct sockaddr_in sa = {0};
+    // socklen_t socklen =
 
 
 

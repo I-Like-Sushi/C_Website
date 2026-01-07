@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./index.css"/>
 </head>
-<body class="neon-background">
-<nav>
-    <a href="#section-this-website" class="nav-link" id="nav-link1">Link test</a>
-    <a href="#section-Triptally" class="nav-link" id="nav-link2" >Link test</a>
-    <a href="#section-Anilytics" class="nav-link" id="nav-link3">Link test</a>
-    <p>Current weather {{weather}}</p>
+<body>
+<nav class="navbar navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">MySite</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-about-me">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-this-website">This website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-triptally">Triptally</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-anilytics">Anilytics</a>
+                </li>
+            </ul>
+
+            <p class="ms-3 mb-0 text-white">Current weather {{weather}}</p>
+        </div>
+    </div>
 </nav>
-<header>
+
+<header class="electric-blue-fade">
     <div class="header-outer-container">
         <div class="header-inner-container">
             <h1>Hello, I'm {{name}}.</h1>
@@ -23,26 +47,34 @@
     </div>
 </header>
 <main>
-    <section id="section-this-website"> <!-- This website -->
+    <section id="section-about-me"> <!-- About me -->
         <div>
-            <img src="./source/img/programming/c.svg" alt="C programming language logo">
+
         </div>
     </section>
-    <section id="section-Triptally"> <!-- Triptally -->
-        <div>
-            sdfsdfsfsdfsdf
-            <img src="./source/img/programming/java.svg" alt="Java programming language logo"/>
-            <img src="./source/img/programming/spring-boot-1.svg" alt="Spring Boot programming language logo"/>
-            <img src="./source/img/programming/postgresql.svg" alt="PostgreSQL programming language logo"/>
-        </div>
-    </section>
-    <section id="section-Anilytics"> <!-- Anilytics -->
-        <div>
-            <img src="./source/img/programming/react.svg" alt="React library for JavaScript logo"/>
-            <img src="./source/img/programming/javascript-1.svg" alt="JavaScript logo"/>
-            <img src="./source/img/programming/html-5.svg" alt="HTML logo"/>
-            <img src="./source/img/programming/css.svg" alt="CSS logo"/>
-        </div>
+    <section id="section-projects">
+        <section id="section-this-website"> <!-- This website -->
+            <div>
+                <img id="c-logo" src="./source/img/programming/c.svg" alt="C programming language logo">
+                <img id="bootstrap-logo" src="./source/img/programming/bootstrap.svg" alt="Bootstrap framework Logo"/>
+            </div>
+        </section>
+        <section id="section-triptally"> <!-- Triptally -->
+            <div>
+                sdfsdfsfsdfsdf
+                <img id="java-logo" src="./source/img/programming/java.svg" alt="Java programming language logo"/>
+                <img id="sprint-boot-logo" src="./source/img/programming/spring-boot-1.svg" alt="Spring Boot programming language logo"/>
+                <img id="postgresql-logo" src="./source/img/programming/postgresql.svg" alt="PostgreSQL programming language logo"/>
+            </div>
+        </section>
+        <section id="section-anilytics"> <!-- Anilytics -->
+            <div>
+                <img id="react-logo" src="./source/img/programming/react.svg" alt="React library for JavaScript logo"/>
+                <img id="javascript-logo" src="./source/img/programming/javascript-1.svg" alt="JavaScript logo"/>
+                <img id="html-logo" src="./source/img/programming/html-5.svg" alt="HTML logo"/>
+                <img id="css-logo" src="./source/img/programming/css.svg" alt="CSS logo"/>
+            </div>
+        </section>
     </section>
     <section> <!-- Future -->
         <div></div>
