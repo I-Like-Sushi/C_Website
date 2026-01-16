@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/// Todo: Understand the following:
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,19 +18,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-void replace_in_file_to(const char *template_path,
-                        const char *output_path,
-                        const char *placeholder,
-                        const char *replacement)
+void replace_in_file_to(const char *template_path, const char *output_path,
+                        const char *placeholder, const char *replacement)
 {
-    // 1. Open template file
+
     FILE *fp = fopen(template_path, "rb");
     if (!fp) {
         perror("fopen (read)");
         return;
     }
 
-    // 2. Get file size
     if (fseek(fp, 0, SEEK_END) != 0) {
         perror("fseek");
         fclose(fp);
@@ -46,7 +41,6 @@ void replace_in_file_to(const char *template_path,
     }
     rewind(fp);
 
-    // 3. Read entire file into memory
     char *buffer = malloc((size_t)size + 1);
     if (!buffer) {
         fclose(fp);
@@ -58,10 +52,8 @@ void replace_in_file_to(const char *template_path,
     buffer[read_bytes] = '\0';
     fclose(fp);
 
-    // 4. Find placeholder
     char *pos = strstr(buffer, placeholder);
     if (!pos) {
-        // No replacement → just copy input to output
         FILE *out = fopen(output_path, "wb");
         if (!out) {
             perror("fopen (write)");
@@ -74,7 +66,6 @@ void replace_in_file_to(const char *template_path,
         return;
     }
 
-    // 5. Compute lengths based on what we actually read
     size_t before_len      = (size_t)(pos - buffer);
     size_t placeholder_len = strlen(placeholder);
     size_t replacement_len = strlen(replacement);
@@ -89,18 +80,16 @@ void replace_in_file_to(const char *template_path,
         return;
     }
 
-    // 6. Build output
-    memcpy(new_buffer, buffer, before_len);                               // before
-    memcpy(new_buffer + before_len, replacement, replacement_len);        // replacement
+    memcpy(new_buffer, buffer, before_len);
+    memcpy(new_buffer + before_len, replacement, replacement_len);
     memcpy(new_buffer + before_len + replacement_len,
            pos + placeholder_len,
-           after_len);                                                    // after
+           after_len);
 
     new_buffer[new_size] = '\0';
 
     free(buffer);
 
-    // 7. Write exactly new_size bytes
     FILE *out = fopen(output_path, "wb");
     if (!out) {
         perror("fopen (write)");

@@ -20,9 +20,9 @@ size_t parse_form(char *body, Key_value *key_value, size_t max_fields) {
     while (pair && count < max_fields) {
         char *equal_char = strchr(pair, '=');
         if (equal_char) {
-            *equal_char = '\0';                         // split "key=value" into two C-strings
-            key_value[count].key = pair;        // key points to start of token
-            key_value[count].value = equal_char + 1;    // value points after '='
+            *equal_char = '\0';
+            key_value[count].key = pair;
+            key_value[count].value = equal_char + 1;
             key_value[count].element = count;
             count++;
         }

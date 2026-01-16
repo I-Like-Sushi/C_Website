@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">MySite</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-about-me">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-this-website">This website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-triptally">Triptally</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#section-anilytics">Anilytics</a>
+                </li>
+            </ul>
+
+            <p class="ms-3 mb-0 text-white">Current weather 9.20°C</p>
+        </div>
+    </div>
+</nav>
+
+<!-- Aandacht trekken achtergrond -->
+
+<header class="electric-blue-fade">
+    <div class="header-outer-container">
+        <div class="header-inner-container">
+            <h1>Hello, I'm Your name.</h1>
+            <h3>And I’m learning how computers work from the ground up — one byte at a time.</h3>
+            <h6>More info about me ↓</h6> <!-- css animatie -->
+        </div>
+    </div>
+</header>
+<!-- Tijdlijn naast zetten. (Oranje)
+     Activity diagram (visueel) (Vanaf socket)-->
+<main>
+    <section id="section-about-me">
+        <div id="stack-imgs">
+            <div id="inner-stack-avatar">
+                <div id="programming-languages">
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/c.svg" alt="C programming language logo">
+                        </div>
+                    </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/bootstrap.svg" alt="Bootstrap framework Logo">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/java.svg" alt="Java">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/spring-boot-1.svg" alt="Spring Boot">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/postgresql.svg" alt="PostgreSQL">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/react.svg" alt="React">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/javascript-1.svg" alt="JavaScript">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/html-5.svg" alt="HTML">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card2">
+                                <img src="./source/img/programming/css.svg" alt="CSS">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="div-about-me">
+            <h2>About me</h2>
+            <div>
+                <img id="avatar-img" src="./source/img/avatar.svg" alt="an avatar"/>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores error, magnam natus
+                repellendus suscipit tenetur veritatis voluptate! Corporis distinctio ipsam libero nihil pariatur
+                recusandae soluta, ut. Deleniti, dolores, quibusdam!</p>
+        </div>
+    </section>
+    <section id="section-projects">
+
+        <div class="project-block">
+            <div class="project-row">
+                <div class="this-website-diagram">
+                    <p><i>See workflow:</i></p>
+                    <img src="/c_socket_diagram_dark.svg" alt="workflow of the website">
+                </div>
+
+                <div class="project-text-col">
+                    <h3>This website</h3>
+                    <p>
+                        As the image already might suggest, I used C to create this website. Why C? In an earlier project
+                        I jumped almost immediately into JavaScript libraries like React. Although powerful, I realized
+                        that knowing a library does not mean understanding how things actually work. To truly understand
+                        servers and computers, I decided to start from scratch—with C.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-block">
+            <div class="project-row">
+                <div class="">
+                    <div class="">
+                        <img src="./source/img/Sequence_diagram.svg" alt="Spring Boot">
+                    </div>
+                    <div class="project-image-frame">
+                        <img src="./source/img/programming/postgresql.svg" alt="PostgreSQL">
+                    </div>
+                </div>
+
+                <div class="project-text-col">
+                    <h3>Triptally</h3>
+                    <p>
+                        Triptally was part of my back-end curriculum during my Software Development bachelor program.
+                        The project focused on building a full back-end application using Java, Spring Boot, and PostgreSQL.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-block">
+            <div class="project-row">
+                <div class="project-images-col">
+                    <div class="project-image-frame">
+                        <img src="./source/img/programming/react.svg" alt="React">
+                    </div>
+                    <div class="project-image-frame">
+                        <img src="./source/img/programming/javascript-1.svg" alt="JavaScript">
+                    </div>
+                    <div class="project-image-frame">
+                        <img src="./source/img/programming/html-5.svg" alt="HTML">
+                    </div>
+                    <div class="project-image-frame">
+                        <img src="./source/img/programming/css.svg" alt="CSS">
+                    </div>
+                </div>
+
+                <div class="project-text-col">
+                    <h3>Anilytics</h3>
+                    <p>
+                        Anilytics was a front-end focused project where I worked with React and modern web technologies.
+                        It taught me how abstraction can speed up development—but also why understanding fundamentals matters.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<footer>
+    <div>
+        <img src="./source/img/programming/github-icon.svg" id="github-icon" alt="Github Icon"/>
+        <a href="https://github.com/I-Like-Sushi" id="github-link" target="_blank">My Github</a>
+        <!-- LinkedIn -->
+    </div>
+</footer>
+</body>
+</html>

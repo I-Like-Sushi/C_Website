@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* Merryweather
    Quicksand
    Libre Baskerville
+   Source Code Pro
 */
-
-
-
-
 
 
 /*------- reset -------*/
@@ -103,107 +101,363 @@ h6 {
 
 /*------- main -------*/
 
+/*#c-logo, #bootstrap-logo, #java-logo, #sprint-boot-logo, #postgresql-logo, #react-logo, #javascript-logo ,#html-logo, #css-logo {*/
+/*    height: 50%;*/
+/*    width: 50%;*/
+/*}*/
 
-
-/* possible background colours main:
-
-
-
-*/
-
-#c-logo, #bootstrap-logo, #java-logo, #sprint-boot-logo, #postgresql-logo, #react-logo, #javascript-logo ,#html-logo, #css-logo {
-    height: 10%;
-    width: 10%;
-}
 
 #section-about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     height: 90vh;
-    padding: 100px 0;
-    background: linear-gradient( 180deg, #003a80 0%, #0a1a33 50%, #0d0d15 100%); color: #e8ecff;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #003a80 0%, #0a1a33 50%, #0d0d15 100%);
+    color: #e8ecff;
+    outline: 3px dashed red;
 }
 
+
+#stack-imgs {
+    width: 45%;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#programming-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: all .3s;
+    box-sizing: border-box;
+}
+
+.card2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card2 img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    display: block;
+}
+
+.card2:hover {
+    transform: scale(0.98);
+}
+
+.card:hover {
+    box-shadow: 0 0 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+#div-about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    min-width: 260px;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    outline: 3px dashed green;
+}
+
+#avatar-img {
+    width: 60%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+
+@media (max-width: 800px) {
+    #section-about-me {
+        flex-direction: column;
+        height: auto;
+        padding: 2.5rem 1rem;
+    }
+
+    #stack-imgs, #div-about-me {
+        width: 100%;
+    }
+
+    #avatar-img {
+        width: 40%;
+        max-width: 160px;
+    }
+
+    .card, .card2 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card2 img {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+
+
 #section-projects {
-    position: relative;
     padding: 120px 0;
-    background: linear-gradient(
-            180deg,
-            #0d0d15 0%,
-            #001a33 60%,
-            #003a80 100%
-    );
+    background: linear-gradient(180deg, #0d0d15 0%, #001a33 60%, #003a80 100%);
+    color: #e8ecff;
+}
+.project-block {
+    width: 100%;
+}
+
+
+.project-triptally {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+
+    border: 3px dashed purple;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.outer-container-this-website-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+
+}
+
+/* container that holds the svg */
+#triptally-container-svg {
+    width: 100%;
+    max-width: 1200px;      /* your desired max width */
+    max-height: 75vh;       /* limit height so it doesn't blow past the viewport */
+    overflow: auto;         /* allow scrolling if the svg is still larger */
+    box-sizing: border-box;
+}
+
+/* make inline svg responsive */
+#triptally-container-svg svg,
+#triptally-container-svg #triptally-svg {
+    width: 100%;            /* fill the container width */
+    height: auto;           /* keep aspect ratio */
+    display: block;         /* remove inline whitespace */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* optional: ensure internal text is readable when scaled */
+#triptally-container-svg svg text {
+    vector-effect: non-scaling-stroke; /* if you want strokes to remain same width */
+}
+
+.anilytics-images {
+    display: flex;
+
+}
+
+
+
+
+
+.project-row {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    align-items: center;
+
+    border: 3px dashed green;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* increase visual spacing on small screens if needed */
+
+@media (max-width: 900px) {
+    #website-workflow-svg {
+        max-height: 50vh;
+    }
+}
+
+/* responsive SVG sizing */
+#website-workflow-svg {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    max-height: 75vh;
+    display: block;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* allow the diagram container to scroll if needed */
+.this-website-diagram {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+
+.project-images-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-image-frame {
+    width: 200px;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.project-image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.project-text-col h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.6rem;
     color: #e8ecff;
 }
 
-#section-projects::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(
-            90deg,
-            rgb(0, 200, 255),
-            rgb(0, 120, 255),
-            rgb(0, 255, 255)
-    );
-    filter: blur(2px);
+.project-text-col p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgba(232, 236, 255, 0.9);
 }
 
+/* Responsive */
+@media (max-width: 900px) {
+    .project-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
+    .outer-container-this-website-diagram {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-
-
-
-
-
-
-#section-this-website {
-    height: 80vh;
-    border: 3px dashed blue;
+    .project-images-col {
+        align-items: center;
+    }
 }
-
-#section-triptally {
-    height: 80vh;
-    border: 3px dashed green;
-}
-
-#section-anilytics {
-    height: 80vh;
-    border: 3px dashed yellowgreen;
-
-}
-
-
 
 
 /*------- footer -------*/
 
 footer {
-    flex: 1;
-    height: 100%;
+    height: 20vh;
     width: 100%;
-    border-block: 3px dashed;
-    border-color: darkred;
+    background: black;
+}
+
+#github-icon {
+    height: 5%;
+    width: 5%;
 }
 
 
 /*------- et cetera -------*/
 
-:root{
-    --bg-top:#0b0026;
-    --bg-bottom:#1b0044;
-    --neon-pink:#ff3ca6;
-    --neon-purple:#6b2cff;
-    --horizon-pink:rgba(255,60,166,0.12);
-    --horizon-purple:rgba(107,44,255,0.06);
+:root {
+    --bg-top: #0b0026;
+    --bg-bottom: #1b0044;
+    --neon-pink: #ff3ca6;
+    --neon-purple: #6b2cff;
+    --horizon-pink: rgba(255, 60, 166, 0.12);
+    --horizon-purple: rgba(107, 44, 255, 0.06);
 }
 
 
-.neon-background{
-    position:relative;
-    min-height:100vh;
-    width:100%;
+.neon-background {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
     background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%) fixed;
     overflow-x: hidden;
     overflow-y: visible;
@@ -211,4 +465,40 @@ footer {
 
 
 /* helper: ensure page content sits above decorative layers */
-.neon-background > * { position:relative; z-index:1; }
+.neon-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 16px;
+    }
+
+    .project-images-col {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .project-image-frame {
+        width: 140px;
+        padding: 10px;
+    }
+
+    .project-text-col {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+

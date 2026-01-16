@@ -1,21 +1,18 @@
-#include <WS2tcpip.h>
-#include <Windows.h>
-#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <libpq-fe.h>
 
 #include "../include/get_form.h"
 #include "../include/edit_text_html.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <WS2tcpip.h>
-#include <Windows.h>
-
-void send_txt_file(SOCKET Client, const char *file_name , const char *type_of_file) {
+void send_txt_file(int Client, const char *file_name , const char *type_of_file) {
     FILE *file = fopen(file_name, "rb");
     if (!file) {
         fprintf(stderr, "Could not open %s.%s file\n", file_name, type_of_file);
@@ -58,11 +55,11 @@ void send_txt_file(SOCKET Client, const char *file_name , const char *type_of_fi
     send(Client, file_body, (int)read_bytes, 0);
 
     free(file_body);
-    closesocket(Client);
+    close(Client);
 }
 
 
-void send_image_file(SOCKET Client, const char *file_name, const char *type_of_file) {
+void send_image_file(int Client, const char *file_name, const char *type_of_file) {
     FILE *file = fopen(file_name, "rb");
     if (!file) fprintf(stderr, "Image file %s could not be opened", file_name);
     fseek(file, 0, SEEK_END);
@@ -87,7 +84,7 @@ void send_image_file(SOCKET Client, const char *file_name, const char *type_of_f
     send(Client, header, header_len, 0);
     send(Client, file_body, filesize, 0);
     free(file_body);
-    closesocket(Client);
+    close(Client);
 }
 
 
