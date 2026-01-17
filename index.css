@@ -30,16 +30,65 @@ p {
     color: white;
 }
 
-.poem {
-    width: 300px;
-    height: 100px;
-    border: 1px solid;
+html {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    --sb-thumb: #00C8FF;
+    --sb-thumb-hover: #00A6D6;
+    --sb-track: rgba(255,255,255,0.04);
+    --sb-track-inner: rgba(0,0,0,0.25);
+    --sb-glow: rgba(0,200,255,0.12);
 }
-.poem {
-    overflow: scroll;
-    scrollbar-color: red orange;
+
+body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    overflow: visible;
+}
+
+/* ---------- Cross-browser scrollbar styling ---------- */
+/* Firefox */
+html {
     scrollbar-width: thin;
+    scrollbar-color: var(--sb-thumb) var(--sb-track); /* thumb, track */
 }
+
+/* WebKit (Chrome, Edge, Safari) */
+html::-webkit-scrollbar { width: 12px; height: 12px; }
+
+html::-webkit-scrollbar-track {
+    background: var(--sb-track);
+    box-shadow: inset 0 0 0 4px var(--sb-track-inner);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--sb-thumb), var(--sb-thumb-hover));
+    border-radius: 10px;
+    box-shadow: 0 0 12px var(--sb-glow);
+    border: 2px solid rgba(255,255,255,0.03);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--sb-thumb-hover), #008fbf);
+    box-shadow: 0 0 18px var(--sb-glow);
+}
+
+/* Active / focused state for keyboard users */
+html::-webkit-scrollbar-thumb:active,
+html::-webkit-scrollbar-thumb:focus {
+    outline: 2px solid rgba(0,200,255,0.18);
+    box-shadow: 0 0 22px rgba(0,200,255,0.16);
+}
+
+/* ---------- Small accessibility/focus polish ---------- */
+:focus { outline-offset: 3px; }
+
+
 
 /*------- navbar -------*/
 
@@ -200,7 +249,7 @@ h6 {
 /* assume header is 80px tall */
 body {
     height: calc(100vh - 80px); /* constrain height */
-    overflow: auto;             /* show scrollbar only when needed */
+    overflow: auto;
     scrollbar-width: thin;      /* Firefox */
     scrollbar-color: red orange;/* Firefox */
 }
@@ -582,10 +631,6 @@ footer {
     z-index: 1;
 }
 
-/* Lightbox trigger sits above inline svg so clicks are not swallowed */
-
-
-
 .svg-inline-wrap,
 .svg-preview-wrap,
 .anilytics-images {
@@ -599,7 +644,6 @@ footer {
 
 }
 
-/* small open link styling */
 .svg-open-link {
     display: inline-block;
     margin-top: 12px;
@@ -610,7 +654,6 @@ footer {
     text-decoration: none;
 }
 
-/* Lightbox backdrop and centering */
 .svg-lightbox {
     position: fixed;
     inset: 0;
@@ -623,12 +666,11 @@ footer {
     box-sizing: border-box;
 }
 
-/* show when fragment matches */
 .svg-lightbox:target {
     display: flex;
 }
 
-/* close button */
+
 .svg-lightbox__close {
     position: absolute;
     top: 18px;
@@ -642,7 +684,6 @@ footer {
     z-index: 100000;
 }
 
-/* content wrapper */
 .svg-lightbox__content {
     max-width: 96vw;
     max-height: 92vh;
@@ -653,7 +694,6 @@ footer {
     justify-content: center;
 }
 
-/* image or svg inside the lightbox */
 .svg-lightbox__img,
 .svg-lightbox__content svg {
     max-width: 78%;
@@ -665,11 +705,6 @@ footer {
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* Optional: if the inline SVG is purely decorative and still blocks clicks,
-   uncomment the next rule. Only use if the inline SVG has no interactive parts. */
-/* .this-website-diagram svg { pointer-events: none; } */
-
-/* Accessibility focus styles */
 .svg-open-link:focus,
 .svg-lightbox__close:focus {
     outline: 3px solid rgba(0,200,255,0.18);
