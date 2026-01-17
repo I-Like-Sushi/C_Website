@@ -30,31 +30,127 @@ p {
     color: white;
 }
 
+.poem {
+    width: 300px;
+    height: 100px;
+    border: 1px solid;
+}
+.poem {
+    overflow: scroll;
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+}
+
 /*------- navbar -------*/
 
-.navbar {
-    background: linear-gradient(
-            180deg,
-            #05010f 0%,
-            #0a0220 100%
-    );
+.site-nav {
+    background: linear-gradient(180deg, #05010f 0%, #0a0220 100%);
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    box-sizing: border-box;
 }
 
-.nav-link {
-    color: rgb(0, 200, 255) !important;
+.site-nav__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.nav-link:hover {
-    color: rgb(0, 255, 255) !important;
+.site-nav__brand {
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(0, 180, 255);
+    margin-right: 1rem;
+    font-family: "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    display: inline-block;
 }
 
-.navbar-brand {
-    color: rgb(0, 180, 255) !important;
+.site-nav__links {
+    margin-left: auto;
+    width: auto;
 }
+
+.site-nav__list {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav__item {
+    display: block;
+}
+
+.site-nav__link {
+    color: rgb(0, 200, 255);
+    text-decoration: none;
+    padding: 8px 6px;
+    display: inline-block;
+    transition: color .15s ease, background .15s ease, transform .08s ease;
+    border-radius: 6px;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+    color: rgb(0, 255, 255);
+    background: rgba(255,255,255,0.03);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.site-nav__link:active {
+    transform: translateY(0);
+    opacity: 0.95;
+}
+
+.site-nav__link:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0,200,255,0.18);
+    border-radius: 6px;
+}
+
+@media (max-width: 575px) {
+    .site-nav__container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .site-nav__brand {
+        flex: 0 0 100%;
+        margin-bottom: 8px;
+    }
+
+    .site-nav__links {
+        width: 100%;
+    }
+
+    .site-nav__list {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding-bottom: 8px;
+    }
+
+    .site-nav__link {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .site-nav__link { padding: 12px 14px; }
+}
+
 
 /*------- header -------*/
 
@@ -101,10 +197,19 @@ h6 {
 
 /*------- main -------*/
 
-/*#c-logo, #bootstrap-logo, #java-logo, #sprint-boot-logo, #postgresql-logo, #react-logo, #javascript-logo ,#html-logo, #css-logo {*/
-/*    height: 50%;*/
-/*    width: 50%;*/
-/*}*/
+/* assume header is 80px tall */
+body {
+    height: calc(100vh - 80px); /* constrain height */
+    overflow: auto;             /* show scrollbar only when needed */
+    scrollbar-width: thin;      /* Firefox */
+    scrollbar-color: red orange;/* Firefox */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-thumb { background: red; border-radius: 6px; }
+body::-webkit-scrollbar-track { background: orange; }
+
 
 
 #section-about-me {
@@ -117,7 +222,6 @@ h6 {
     box-sizing: border-box;
     background: linear-gradient(180deg, #003a80 0%, #0a1a33 50%, #0d0d15 100%);
     color: #e8ecff;
-    outline: 3px dashed red;
 }
 
 
@@ -186,7 +290,6 @@ h6 {
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
-    outline: 3px dashed green;
 }
 
 #avatar-img {
@@ -226,12 +329,12 @@ h6 {
 }
 
 
-
 #section-projects {
     padding: 120px 0;
     background: linear-gradient(180deg, #0d0d15 0%, #001a33 60%, #003a80 100%);
     color: #e8ecff;
 }
+
 .project-block {
     width: 100%;
 }
@@ -239,15 +342,12 @@ h6 {
 
 .project-triptally {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: center;
     grid-template-columns: 240px 1fr;
     gap: 48px;
     align-items: center;
     text-align: center;
-
-    border: 3px dashed purple;
-
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
@@ -266,54 +366,107 @@ h6 {
 
 }
 
-/* container that holds the svg */
 #triptally-container-svg {
     width: 100%;
-    max-width: 1200px;      /* your desired max width */
-    max-height: 75vh;       /* limit height so it doesn't blow past the viewport */
-    overflow: auto;         /* allow scrolling if the svg is still larger */
+    max-width: 1200px;
+    max-height: 75vh;
+    overflow: auto;
     box-sizing: border-box;
 }
 
-/* make inline svg responsive */
 #triptally-container-svg svg,
 #triptally-container-svg #triptally-svg {
-    width: 100%;            /* fill the container width */
-    height: auto;           /* keep aspect ratio */
-    display: block;         /* remove inline whitespace */
+    width: 100%;
+    height: auto;
+    display: block;
     max-width: 100%;
     max-height: 100%;
 }
 
-/* optional: ensure internal text is readable when scaled */
 #triptally-container-svg svg text {
-    vector-effect: non-scaling-stroke; /* if you want strokes to remain same width */
+    vector-effect: non-scaling-stroke;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+    text-align: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
 }
 
 .anilytics-images {
     display: flex;
-
-}
-
-
-
-
-
-.project-row {
-    display: flex;
-    justify-content: center;
-    grid-template-columns: 240px 1fr;
-    gap: 48px;
+    flex-direction: column;
+    gap: 16px;
     align-items: center;
-
-    border: 3px dashed green;
-
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* increase visual spacing on small screens if needed */
+.anilytics-images img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+    .project-row {
+        grid-template-columns: 1fr;
+        padding: 40px 16px;
+    }
+
+    .anilytics-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+        gap: 30px;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.lightbox .close {
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 
 @media (max-width: 900px) {
     #website-workflow-svg {
@@ -321,7 +474,6 @@ h6 {
     }
 }
 
-/* responsive SVG sizing */
 #website-workflow-svg {
     width: 100%;
     height: auto;
@@ -333,43 +485,6 @@ h6 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* allow the diagram container to scroll if needed */
 .this-website-diagram {
     max-height: 80vh;
     overflow: auto;
@@ -410,7 +525,6 @@ h6 {
     color: rgba(232, 236, 255, 0.9);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .project-row {
         grid-template-columns: 1fr;
@@ -463,12 +577,106 @@ footer {
     overflow-y: visible;
 }
 
-
-/* helper: ensure page content sits above decorative layers */
 .neon-background > * {
     position: relative;
     z-index: 1;
 }
+
+/* Lightbox trigger sits above inline svg so clicks are not swallowed */
+
+
+
+.svg-inline-wrap,
+.svg-preview-wrap,
+.anilytics-images {
+    position: relative;
+    z-index: 20;
+}
+
+.svg-preview-wrap {
+
+
+
+}
+
+/* small open link styling */
+.svg-open-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #00c8ff;
+    background: rgba(255,255,255,0.02);
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Lightbox backdrop and centering */
+.svg-lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.88);
+    z-index: 99999;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* show when fragment matches */
+.svg-lightbox:target {
+    display: flex;
+}
+
+/* close button */
+.svg-lightbox__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    background: rgba(255,255,255,0.02);
+    padding: 6px 10px;
+    border-radius: 6px;
+    z-index: 100000;
+}
+
+/* content wrapper */
+.svg-lightbox__content {
+    max-width: 96vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* image or svg inside the lightbox */
+.svg-lightbox__img,
+.svg-lightbox__content svg {
+    max-width: 78%;
+    max-height: 78%;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* Optional: if the inline SVG is purely decorative and still blocks clicks,
+   uncomment the next rule. Only use if the inline SVG has no interactive parts. */
+/* .this-website-diagram svg { pointer-events: none; } */
+
+/* Accessibility focus styles */
+.svg-open-link:focus,
+.svg-lightbox__close:focus {
+    outline: 3px solid rgba(0,200,255,0.18);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
 
 
 @media (max-width: 768px) {
