@@ -36,18 +36,15 @@ html {
     -webkit-overflow-scrolling: touch;
     --sb-thumb: #00C8FF;
     --sb-thumb-hover: #00A6D6;
-    --sb-track: rgba(255,255,255,0.04);
-    --sb-track-inner: rgba(0,0,0,0.25);
-    --sb-glow: rgba(0,200,255,0.12);
+    --sb-track: rgba(255, 255, 255, 0.04);
+    --sb-track-inner: rgba(0, 0, 0, 0.25);
+    --sb-glow: rgba(0, 200, 255, 0.12);
 }
 
 body {
+    height: auto !important; /* remove any calc(100vh - X) constraint */
     min-height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: auto !important;
-    overflow: visible;
+    overflow: visible !important; /* body must not be the scroller */
 }
 
 /* ---------- Cross-browser scrollbar styling ---------- */
@@ -58,7 +55,10 @@ html {
 }
 
 /* WebKit (Chrome, Edge, Safari) */
-html::-webkit-scrollbar { width: 12px; height: 12px; }
+html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
 
 html::-webkit-scrollbar-track {
     background: var(--sb-track);
@@ -70,7 +70,7 @@ html::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, var(--sb-thumb), var(--sb-thumb-hover));
     border-radius: 10px;
     box-shadow: 0 0 12px var(--sb-glow);
-    border: 2px solid rgba(255,255,255,0.03);
+    border: 2px solid rgba(255, 255, 255, 0.03);
 }
 
 html::-webkit-scrollbar-thumb:hover {
@@ -81,13 +81,14 @@ html::-webkit-scrollbar-thumb:hover {
 /* Active / focused state for keyboard users */
 html::-webkit-scrollbar-thumb:active,
 html::-webkit-scrollbar-thumb:focus {
-    outline: 2px solid rgba(0,200,255,0.18);
-    box-shadow: 0 0 22px rgba(0,200,255,0.16);
+    outline: 2px solid rgba(0, 200, 255, 0.18);
+    box-shadow: 0 0 22px rgba(0, 200, 255, 0.16);
 }
 
 /* ---------- Small accessibility/focus polish ---------- */
-:focus { outline-offset: 3px; }
-
+:focus {
+    outline-offset: 3px;
+}
 
 
 /*------- navbar -------*/
@@ -98,7 +99,7 @@ html::-webkit-scrollbar-thumb:focus {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     box-sizing: border-box;
 }
 
@@ -152,7 +153,7 @@ html::-webkit-scrollbar-thumb:focus {
 .site-nav__link:hover,
 .site-nav__link:focus {
     color: rgb(0, 255, 255);
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     outline: none;
     transform: translateY(-1px);
 }
@@ -163,7 +164,7 @@ html::-webkit-scrollbar-thumb:focus {
 }
 
 .site-nav__link:focus-visible {
-    box-shadow: 0 0 0 3px rgba(0,200,255,0.18);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.18);
     border-radius: 6px;
 }
 
@@ -197,7 +198,9 @@ html::-webkit-scrollbar-thumb:focus {
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .site-nav__link { padding: 12px 14px; }
+    .site-nav__link {
+        padding: 12px 14px;
+    }
 }
 
 
@@ -250,15 +253,23 @@ h6 {
 body {
     height: calc(100vh - 80px); /* constrain height */
     overflow: auto;
-    scrollbar-width: thin;      /* Firefox */
-    scrollbar-color: red orange;/* Firefox */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: red orange; /* Firefox */
 }
 
 /* WebKit browsers (Chrome, Safari) */
-body::-webkit-scrollbar { width: 10px; }
-body::-webkit-scrollbar-thumb { background: red; border-radius: 6px; }
-body::-webkit-scrollbar-track { background: orange; }
+body::-webkit-scrollbar {
+    width: 10px;
+}
 
+body::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: orange;
+}
 
 
 #section-about-me {
@@ -641,14 +652,13 @@ footer {
 .svg-preview-wrap {
 
 
-
 }
 
 .svg-open-link {
     display: inline-block;
     margin-top: 12px;
     color: #00c8ff;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     padding: 6px 10px;
     border-radius: 6px;
     text-decoration: none;
@@ -660,7 +670,7 @@ footer {
     display: none;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.88);
+    background: rgba(0, 0, 0, 0.88);
     z-index: 99999;
     padding: 24px;
     box-sizing: border-box;
@@ -678,7 +688,7 @@ footer {
     color: #fff;
     text-decoration: none;
     font-size: 22px;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     padding: 6px 10px;
     border-radius: 6px;
     z-index: 100000;
@@ -702,16 +712,15 @@ footer {
     height: auto;
     display: block;
     border-radius: 6px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 .svg-open-link:focus,
 .svg-lightbox__close:focus {
-    outline: 3px solid rgba(0,200,255,0.18);
+    outline: 3px solid rgba(0, 200, 255, 0.18);
     outline-offset: 2px;
     border-radius: 6px;
 }
-
 
 
 @media (max-width: 768px) {
