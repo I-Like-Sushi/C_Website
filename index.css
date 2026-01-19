@@ -90,7 +90,6 @@ html::-webkit-scrollbar-thumb:focus {
     outline-offset: 3px;
 }
 
-
 /*------- navbar -------*/
 
 .site-nav {
@@ -206,8 +205,11 @@ html::-webkit-scrollbar-thumb:focus {
 
 /*------- header -------*/
 
+/* =========================
+   Base / existing rules
+   ========================= */
+
 .electric-blue-fade {
-    padding: 100px 0;
     background: linear-gradient(
             180deg,
             #05010f 0%,
@@ -225,14 +227,146 @@ html::-webkit-scrollbar-thumb:focus {
 }
 
 .header-inner-container {
-    height: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-    border: 3px dashed goldenrod;
     display: flex;
+    text-align: center;
+    flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
 }
+
+@media (min-width: 800px) {
+    .header-inner-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 2.4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.hero-copy {
+    flex: 1 1 56%;
+    min-width: 260px;
+    color: #e8ecff;
+}
+.hero-copy h1 {
+    font-size: 2.4rem;
+    line-height: 1.05;
+    margin-bottom: .4rem;
+    font-family: "Exo 2", sans-serif;
+}
+.hero-copy .role {
+    color: rgba(232,236,255,0.85);
+    margin-bottom: .6rem;
+    font-weight: 500;
+}
+
+.hero-copy .lead {
+    margin-bottom: 1rem;
+    color: rgba(232,236,255,0.92);
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: inline-flex;
+    gap: .75rem;
+    align-items: center;
+    margin-top: .6rem;
+    flex-wrap: wrap;
+}
+
+/* Primary CTA (kept from your rules) */
+.btn-primary {
+    display: inline-block;
+    background: rgb(0,200,255);
+    color: #00121a;
+    padding: .7rem 1.1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,200,255,0.12);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,200,255,0.18);
+}
+.btn-primary:focus-visible {
+    outline: 3px solid rgba(0,200,255,0.18);
+    outline-offset: 3px;
+}
+
+/* Secondary / ghost CTA */
+.btn-ghost {
+    background: transparent;
+    color: rgba(0,200,255,0.95);
+    padding: .6rem .9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: background .12s ease, transform .12s ease;
+}
+.btn-ghost:hover,
+.btn-ghost:focus {
+    background: rgba(255,255,255,0.02);
+    transform: translateY(-2px);
+}
+.btn-ghost:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0,200,255,0.12);
+    border-radius: 8px;
+}
+
+#btn-email-me:hover {
+    color: green;
+}
+
+/* hint text under actions */
+.hint {
+    margin-top: .9rem;
+    color: rgba(232,236,255,0.7);
+    font-size: .95rem;
+}
+
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: .5rem .75rem;
+    background: rgba(0,0,0,0.8);
+    color: #00c8ff;
+    border-radius: 6px;
+    z-index: 2000;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .typed .text,
+    .typed .cursor,
+    .btn-primary,
+    .btn-ghost { animation: none !important; transition: none !important; }
+}
+
+@media (max-width: 800px) {
+    .header-inner-container { flex-direction: column; text-align: center; }
+    .hero-copy h1 { font-size: 1.8rem; }
+    .hero-actions { justify-content: center; }
+}
+
 
 h1 {
     color: white;
@@ -248,28 +382,6 @@ h6 {
 }
 
 /*------- main -------*/
-
-/* assume header is 80px tall */
-body {
-    height: calc(100vh - 80px); /* constrain height */
-    overflow: auto;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: red orange; /* Firefox */
-}
-
-/* WebKit browsers (Chrome, Safari) */
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 6px;
-}
-
-body::-webkit-scrollbar-track {
-    background: orange;
-}
 
 
 #section-about-me {
@@ -604,16 +716,115 @@ a:link {
 
 /*------- footer -------*/
 
-footer {
-    height: 20vh;
-    width: 100%;
-    background: black;
+:root {
+    --footer-bg-top: #05010f;
+    --footer-bg-bottom: #0a0220;
+    --muted: rgba(232,236,255,0.72);
+    --accent: #00c8ff;
+    --accent-strong: rgba(0,200,255,0.12);
 }
 
-#github-icon {
-    height: 5%;
-    width: 5%;
+/* Footer base */
+.site-footer {
+    width: 100%;
+    background: linear-gradient(180deg, var(--footer-bg-top), var(--footer-bg-bottom));
+    color: #e8ecff;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.03);
 }
+
+/* Inner layout */
+.site-footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* Brand block */
+.site-footer__brand {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    min-width: 220px;
+}
+.site-footer__icon {
+    width: 44px;
+    height: 44px;
+    display: block;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6));
+}
+.site-footer__meta { line-height: 1.05; }
+.site-footer__name { font-weight: 700; margin: 0; font-family: "Exo 2", sans-serif; }
+.site-footer__tag { margin: 0; color: var(--muted); font-size: .92rem; }
+
+/* Nav links */
+.site-footer__nav { margin: 0; }
+.site-footer__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.site-footer__link {
+    color: var(--accent);
+    text-decoration: none;
+    padding: .35rem .5rem;
+    border-radius: 8px;
+    transition: background .12s ease, transform .12s ease;
+}
+.site-footer__link:hover,
+.site-footer__link:focus {
+    background: rgba(255,255,255,0.02);
+    transform: translateY(-2px);
+}
+.site-footer__link:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0,200,255,0.12);
+    border-radius: 8px;
+}
+
+/* Contact / CTA */
+.site-footer__contact { display: flex; gap: 1rem; align-items: center; min-width: 220px; }
+.site-footer__cta {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: .5rem .8rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.site-footer__cta:hover,
+.site-footer__cta:focus {
+    background: var(--accent-strong);
+    color: #00121a;
+    transform: translateY(-2px);
+}
+.site-footer__cta:focus-visible { outline: 3px solid rgba(0,200,255,0.14); outline-offset: 3px; }
+
+/* Copyright */
+.site-footer__copyright { margin: 0; color: var(--muted); font-size: .92rem; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 720px) {
+    .site-footer__inner { flex-direction: column; align-items: stretch; gap: 1rem; text-align: center; }
+    .site-footer__brand, .site-footer__contact { justify-content: center; }
+    .site-footer__list { justify-content: center; flex-wrap: wrap; gap: .6rem; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .site-footer__link,
+    .site-footer__cta { transition: none; transform: none; }
+}
+
 
 
 /*------- et cetera -------*/
@@ -722,6 +933,23 @@ footer {
     border-radius: 6px;
 }
 
+#website-workflow-svg,
+#website-workflow-svg * {
+    stroke: #ffffff !important;
+    stroke-width: 1.5px !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none !important;
+    vector-effect: none !important;
+}
+
+#website-workflow-svg rect { fill: none !important; stroke: #ffffff !important; }
+
+#website-workflow-svg marker polygon,
+#website-workflow-svg marker path {
+    fill: #ffffff !important;
+    stroke: none !important;
+}
 
 @media (max-width: 768px) {
     .project-row {

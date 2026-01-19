@@ -10,7 +10,7 @@
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main site navigation">
     <div class="site-nav__container">
-        <a class="site-nav__brand" href="#" id="siteBrand">MySite</a>
+        <a class="site-nav__brand" href="#" id="siteBrand">Main</a>
 
         <div class="site-nav__links" id="siteMainNav" role="menubar" aria-labelledby="siteBrand">
             <ul class="site-nav__list" role="menu">
@@ -18,13 +18,13 @@
                     <a class="site-nav__link" role="menuitem" href="#section-about-me">About me</a>
                 </li>
                 <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#section-this-website">This website</a>
+                    <a class="site-nav__link" role="menuitem" href="#this-website-diagram">This website</a>
                 </li>
                 <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#section-triptally">Triptally</a>
+                    <a class="site-nav__link" role="menuitem" href="#project-triptally">Triptally</a>
                 </li>
                 <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#section-anilytics">Anilytics</a>
+                    <a class="site-nav__link" role="menuitem" href="#project-row">Anilytics</a>
                 </li>
             </ul>
         </div>
@@ -32,19 +32,22 @@
 </nav>
 
 
-<!-- Aandacht trekken achtergrond -->
-
-<header class="electric-blue-fade">
+<header class="electric-blue-fade" role="banner">
     <div class="header-outer-container">
         <div class="header-inner-container">
-            <h1>Hello, I'm {{name}}.</h1>
-            <h3>And I’m learning how computers work from the ground up — one byte at a time.</h3>
-            <h6>More info about me ↓</h6> <!-- css animatie -->
+            <div class="hero-copy">
+                <h1>Hello, I’m <strong>Deniz</strong>.</h1>
+                <p class="role"></p>
+                <p class="lead">An inquisitive fullstack developer open to all challenges</p>
+                <div class="hero-actions" role="group" aria-label="Primary actions">
+                    <a class="btn-primary" href="#section-about-me">About me</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>
-<!-- Tijdlijn naast zetten. (Oranje)
-     Activity diagram (visueel) (Vanaf socket)-->
+
 <main>
     <section id="section-about-me">
         <div id="stack-imgs">
@@ -55,63 +58,81 @@
                             <img src="./source/img/programming/c.svg" alt="C programming language logo">
                         </div>
                     </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/bootstrap.svg" alt="Bootstrap framework Logo">
-                            </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/bootstrap.svg" alt="Bootstrap framework Logo">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/java.svg" alt="Java">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/java.svg" alt="Java">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/spring-boot-1.svg" alt="Spring Boot">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/spring-boot-1.svg" alt="Spring Boot">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/postgresql.svg" alt="PostgreSQL">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/postgresql.svg" alt="PostgreSQL">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/react.svg" alt="React">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/react.svg" alt="React">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/javascript-1.svg" alt="JavaScript">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/javascript-1.svg" alt="JavaScript">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/html-5.svg" alt="HTML">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/html-5.svg" alt="HTML">
                         </div>
-                        <div class="card">
-                            <div class="card2">
-                                <img src="./source/img/programming/css.svg" alt="CSS">
-                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card2">
+                            <img src="./source/img/programming/css.svg" alt="CSS">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         <div id="div-about-me">
             <h2>About me</h2>
             <div>
                 <img id="avatar-img" src="./source/img/avatar.svg" alt="an avatar"/>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores error, magnam natus
-                repellendus suscipit tenetur veritatis voluptate! Corporis distinctio ipsam libero nihil pariatur
-                recusandae soluta, ut. Deleniti, dolores, quibusdam!</p>
+            <p style="font-family: quicksand, sans-serif">My name is Deniz. I discovered my passion for computers later
+                in life, after spending more than a decade
+                working in logistics and airfreight. While searching for a new direction, I tried a
+                Python course on Codecademy — and that single course completely changed my path. I was surprised by how
+                quickly programming clicked for me, and I knew I wanted to pursue it seriously.
+
+                I enrolled in a one‑year Fullstack Developer program at Novi University of Applied Sciences, where I
+                learned both frontend and backend development. The frontend focused on React, HTML, and CSS, while the
+                backend centered around Java Spring Boot and PostgreSQL. Completing the program gave me a solid
+                foundation, but I felt that many deeper fundamentals were missing — especially the low‑level concepts
+                that explain why things work the way they do.
+
+                That curiosity led me to C. Building small projects and eventually writing my own HTTP server taught me
+                more about computers than anything else I had done before. Working in C forces you to understand memory,
+                processes, and system behavior directly. It showed me not just what things do, but how they actually
+                work under the hood.
+
+                Outside of programming, I enjoy spending time with friends, going for a run, working out at the gym,
+                watching anime, or reading a good book.
+            </p>
+            <a class="btn-ghost" href="#this-website-diagram">View projects</a>
         </div>
     </section>
     <section id="section-projects">
 
         <div class="project-block">
-            <div class="outer-container-this-website-diagram">
+            <div class="outer-container-this-website-diagram" id="this-website-diagram">
                 <div class="this-website-diagram">
                     <p><i>See workflow:</i></p>
                     <svg id="website-workflow-svg" xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +144,9 @@
                          style="background: transparent; background-color: transparent;">
 
                         <defs>
-                            <style type="text/css"><![CDATA[
+                            <style type="text/css"><
+                            !
+                            [CDATA[
       /* Keep original visual intent but arrows will have a small arrowhead */
       path[style*="stroke:"],
                             path[stroke],
@@ -158,16 +181,21 @@
                             text, .title, .subtitle, .optional {
                                 fill: #ffffff !important;
                             }
-                            ]]></style>
+
+                            ]
+                            ]
+                            ></style>
 
                             <!-- subtle drop shadow for boxes -->
                             <filter id="box-shadow" x="-30%" y="-30%" width="160%" height="160%">
-                                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+                                <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000"
+                                              flood-opacity="0.35"/>
                             </filter>
 
                             <!-- small arrowhead marker -->
-                            <marker id="small-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-                                <polygon points="0 0, 8 3, 0 6" fill="#ffffff" />
+                            <marker id="small-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"
+                                    markerUnits="strokeWidth">
+                                <polygon points="0 0, 8 3, 0 6" fill="#ffffff"/>
                             </marker>
                         </defs>
 
@@ -198,7 +226,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -206,16 +235,23 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">socket()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">socket()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Create an endpoint</b></font>
+                                                                        <font face="Quicksand"
+                                                                              data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Create
+                                                                            an endpoint</b></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="98" y="44" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">socket()...</text>
+                                                    <text x="98" y="44" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        socket()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -244,7 +280,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -252,10 +289,13 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">setsockopt()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">setsockopt()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>configuring behavior</b></font>
+                                                                        <font face="Quicksand"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>configuring
+                                                                            behavior</b></font>
                                                                     </div>
                                                                     <div>
                                                                         <font style="font-size: 10px; color: rgb(255, 255, 255);">(optional)</font>
@@ -264,7 +304,10 @@
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="98" y="194" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">setsockopt()...</text>
+                                                    <text x="98" y="194" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        setsockopt()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -293,7 +336,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -301,16 +345,23 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">bind()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">bind()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Assign IP + port</b></font>
+                                                                        <font face="Quicksand"
+                                                                              data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Assign
+                                                                            IP + port</b></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="98" y="344" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">bind()...</text>
+                                                    <text x="98" y="344" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        bind()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -318,7 +369,8 @@
 
                                     <g data-cell-id="bRcz245sA1s3oTQF16aW-37">
                                         <g transform="translate(0.5,0.5)">
-                                            <path d="M 195 490 L 230 490 Q 240 490 240 480 L 240 50 Q 240 40 250 40 L 298.63 40" fill="none"
+                                            <path d="M 195 490 L 230 490 Q 240 490 240 480 L 240 50 Q 240 40 250 40 L 298.63 40"
+                                                  fill="none"
                                                   stroke="#000000"
                                                   style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"
                                                   stroke-miterlimit="10"
@@ -339,7 +391,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -347,16 +400,23 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">listen()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">listen()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Make it accept connections</b></font>
+                                                                        <font face="Quicksand"
+                                                                              data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Make
+                                                                            it accept connections</b></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="98" y="494" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">listen()...</text>
+                                                    <text x="98" y="494" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        listen()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -385,7 +445,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -393,16 +454,24 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">accept()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">accept()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Perform TCP handshake and create client socket</b></font>
+                                                                        <font face="Quicksand"
+                                                                              data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>Perform
+                                                                            TCP handshake and create client
+                                                                            socket</b></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="403" y="44" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">accept()...</text>
+                                                    <text x="403" y="44" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        accept()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -410,7 +479,8 @@
 
                                     <g data-cell-id="bRcz245sA1s3oTQF16aW-39">
                                         <g transform="translate(0.5,0.5)">
-                                            <path d="M 402.5 230 L 402.5 260 Q 402.5 270 402.5 280 L 402.5 293.63" fill="none"
+                                            <path d="M 402.5 230 L 402.5 260 Q 402.5 270 402.5 280 L 402.5 293.63"
+                                                  fill="none"
                                                   stroke="#000000"
                                                   style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"
                                                   stroke-miterlimit="10"
@@ -431,7 +501,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -439,16 +510,23 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">recv()/send()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">recv()/send()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <b><font face="Quicksand" data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));">Exchange data</font></b>
+                                                                        <b><font face="Quicksand"
+                                                                                 data-font-src="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&amp;display=swap"
+                                                                                 style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));">Exchange
+                                                                            data</font></b>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="403" y="194" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">recv()/send()...</text>
+                                                    <text x="403" y="194" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        recv()/send()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -477,7 +555,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -485,16 +564,22 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Source Code Pro" style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">close()</font>
+                                                                        <font face="Source Code Pro"
+                                                                              style="color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));">close()</font>
                                                                     </div>
                                                                     <div>
-                                                                        <font face="Quicksand" style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>End connection</b></font>
+                                                                        <font face="Quicksand"
+                                                                              style="color: light-dark(rgb(0, 204, 0), rgb(0, 162, 0));"><b>End
+                                                                            connection</b></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </foreignObject>
-                                                    <text x="403" y="344" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="12px" text-anchor="middle">close()...</text>
+                                                    <text x="403" y="344" fill="light-dark(#000000, #ffffff)"
+                                                          font-family="Helvetica" font-size="12px" text-anchor="middle">
+                                                        close()...
+                                                    </text>
                                                 </switch>
                                             </g>
                                         </g>
@@ -518,7 +603,8 @@
                                         <g>
                                             <g>
                                                 <switch>
-                                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none"
+                                                    <foreignObject style="overflow: visible; text-align: left;"
+                                                                   pointer-events="none"
                                                                    width="100%" height="100%"
                                                                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
                                                         <div xmlns="http://www.w3.org/1999/xhtml"
@@ -526,7 +612,9 @@
                                                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000;">
                                                                 <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">
                                                                     <div>
-                                                                        <font face="Times New Roman" style="color: light-dark(rgb(204, 0, 204), rgb(255, 137, 255));"><i>Back to accept()</i></font>
+                                                                        <font face="Times New Roman"
+                                                                              style="color: light-dark(rgb(204, 0, 204), rgb(255, 137, 255));"><i>Back
+                                                                            to accept()</i></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -547,18 +635,16 @@
 
                 <div class="project-text-col">
                     <h3>This website</h3>
-                    <p>
-                        As the image already might suggest, I used C to create this website. Why C? In an earlier project
-                        I jumped almost immediately into JavaScript libraries like React. Although powerful, I realized
-                        that knowing a library does not mean understanding how things actually work. To truly understand
-                        servers and computers, I decided to start from scratch—with C.
+                    <p>After finding out later that hosting a website in C is quite expensive, I decided against it. If I had
+                        built this website as a pure C server, this is the workflow it would follow. From
+                        creating a socket to closing the connection. In the making of this website has no JavaScript been used. <a href="https://github.com/I-Like-Sushi/C_Website" target="_blank">Click here for the repository</a>
                     </p>
                 </div>
             </div>
         </div>
 
         <div class="project-block">
-            <div class="project-triptally">
+            <div id="project-triptally" class="project-triptally">
                 <div id="triptally-container-svg">
                     <div class="svg-preview-wrap">
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -567,12 +653,14 @@
                              preserveAspectRatio="xMidYMid meet"
                              width="100%"
                              height="auto">
-                            <g transform="translate(-137.8333333333331 167.33333333333326) scale(0.28)" lucid:page-tab-id="HWEp-vi-RSFO">
+                            <g transform="translate(-137.8333333333331 167.33333333333326) scale(0.28)"
+                               lucid:page-tab-id="HWEp-vi-RSFO">
                                 <path d="M613.83 0h377.75v626H613.83z" stroke="#fff" stroke-width="2"/>
                                 <path d="M613.83 91.02h377.75" stroke="#fff" stroke-width="2" fill="black"/>
                                 <use xlink:href="#a"
                                      transform="matrix(1,0,0,1,621.8333333333331,8) translate(141.55875651041666 20.51204427083333)"/>
-                                <use xlink:href="#b" transform="matrix(1,0,0,1,621.8333333333331,8) translate(154.23828125 45.51790364583333)"/>
+                                <use xlink:href="#b"
+                                     transform="matrix(1,0,0,1,621.8333333333331,8) translate(154.23828125 45.51790364583333)"/>
                                 <use xlink:href="#c"
                                      transform="matrix(1,0,0,1,621.8333333333331,8) translate(157.94173177083334 70.52376302083334)"/>
                                 <use xlink:href="#d"
@@ -682,82 +770,96 @@
                                 <path d="M1420 0h420v561h-420z" stroke="#fff" stroke-width="2"/>
                                 <path d="M1420 91.02h420" stroke="#fff" stroke-width="2" fill="none"/>
                                 <g>
-                                    <use xlink:href="#z" transform="matrix(1,0,0,1,1428,8) translate(162.55875651041666 20.51204427083333)"/>
-                                    <use xlink:href="#A" transform="matrix(1,0,0,1,1428,8) translate(175.23828125 45.51790364583333)"/>
-                                    <use xlink:href="#B" transform="matrix(1,0,0,1,1428,8) translate(183.03369140625 70.52376302083334)"/>
+                                    <use xlink:href="#z"
+                                         transform="matrix(1,0,0,1,1428,8) translate(162.55875651041666 20.51204427083333)"/>
+                                    <use xlink:href="#A"
+                                         transform="matrix(1,0,0,1,1428,8) translate(175.23828125 45.51790364583333)"/>
+                                    <use xlink:href="#B"
+                                         transform="matrix(1,0,0,1,1428,8) translate(183.03369140625 70.52376302083334)"/>
                                 </g>
                                 <g>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 72.72319878472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 72.72319878472223)"/>
                                     <use xlink:href="#C"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 72.72319878472223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(89.7229817708333 72.72319878472223)"/>
                                     <use xlink:href="#g"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(102.50141059027774 72.72319878472223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 105.31148003472222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 105.31148003472222)"/>
                                     <use xlink:href="#D"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 105.31148003472222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(78.04047309027776 105.31148003472222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(90.8189019097222 105.31148003472222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 137.89976128472222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 137.89976128472222)"/>
                                     <use xlink:href="#E"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 137.89976128472222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(139.76269531249997 137.89976128472222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(152.5411241319444 137.89976128472222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 170.4880425347222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 170.4880425347222)"/>
                                     <use xlink:href="#F"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 170.4880425347222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(141.9216579861111 170.4880425347222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(154.70008680555551 170.4880425347222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 203.0763237847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 203.0763237847222)"/>
                                     <use xlink:href="#G"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 203.0763237847222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(120.00325520833331 203.0763237847222)"/>
                                     <use xlink:href="#o"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(132.78168402777774 203.0763237847222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 235.6646050347222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 235.6646050347222)"/>
                                     <use xlink:href="#H"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 235.6646050347222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(112.04687499999997 235.6646050347222)"/>
                                     <use xlink:href="#o"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(124.82530381944441 235.6646050347222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 268.2528862847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 268.2528862847222)"/>
                                     <use xlink:href="#I"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 268.2528862847222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(258.67003038194446 268.2528862847222)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(271.4484592013889 268.2528862847222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 300.8411675347222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 300.8411675347222)"/>
                                     <use xlink:href="#K"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 300.8411675347222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(253.01508246527777 300.8411675347222)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(265.79351128472223 300.8411675347222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 333.4294487847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 333.4294487847222)"/>
                                     <use xlink:href="#L"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 333.4294487847222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(236.99273003472217 333.4294487847222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(249.7711588541666 333.4294487847222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 366.0177300347222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 366.0177300347222)"/>
                                     <use xlink:href="#M"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 366.0177300347222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(222.05533854166663 366.0177300347222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(234.83376736111106 366.0177300347222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 398.60601128472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,99.01757812500001) translate(0 398.60601128472223)"/>
                                     <use xlink:href="#N"
                                          transform="matrix(1,0,0,1,1432,99.01757812500001) translate(16.63606770833333 398.60601128472223)"/>
                                     <use xlink:href="#f"
@@ -768,40 +870,48 @@
                                 <path d="M1420 780h355.66v360H1420z" stroke="#fff" stroke-width="2"/>
                                 <path d="M1420 871.02h355.66" stroke="#fff" stroke-width="2" fill="none"/>
                                 <g>
-                                    <use xlink:href="#z" transform="matrix(1,0,0,1,1428,788) translate(130.55875651041666 20.51204427083333)"/>
-                                    <use xlink:href="#A" transform="matrix(1,0,0,1,1428,788) translate(143.23828125 45.51790364583333)"/>
-                                    <use xlink:href="#P" transform="matrix(1,0,0,1,1428,788) translate(140.00911458333331 70.52376302083334)"/>
+                                    <use xlink:href="#z"
+                                         transform="matrix(1,0,0,1,1428,788) translate(130.55875651041666 20.51204427083333)"/>
+                                    <use xlink:href="#A"
+                                         transform="matrix(1,0,0,1,1428,788) translate(143.23828125 45.51790364583333)"/>
+                                    <use xlink:href="#P"
+                                         transform="matrix(1,0,0,1,1428,788) translate(140.00911458333331 70.52376302083334)"/>
                                 </g>
                                 <g>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,879.017578125) translate(0 69.48804253472224)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,879.017578125) translate(0 69.48804253472224)"/>
                                     <use xlink:href="#e"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(16.63606770833333 69.48804253472224)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(42.12717013888888 69.48804253472224)"/>
                                     <use xlink:href="#g"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(54.90559895833332 69.48804253472224)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,879.017578125) translate(0 102.07632378472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,879.017578125) translate(0 102.07632378472223)"/>
                                     <use xlink:href="#Q"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(16.63606770833333 102.07632378472223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(149.75748697916663 102.07632378472223)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(162.53591579861106 102.07632378472223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,879.017578125) translate(0 134.66460503472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,879.017578125) translate(0 134.66460503472223)"/>
                                     <use xlink:href="#R"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(16.63606770833333 134.66460503472223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(138.2722439236111 134.66460503472223)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(151.05067274305551 134.66460503472223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,879.017578125) translate(0 167.2528862847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,879.017578125) translate(0 167.2528862847222)"/>
                                     <use xlink:href="#S"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(16.63606770833333 167.2528862847222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(136.35438368055551 167.2528862847222)"/>
                                     <use xlink:href="#T"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(149.13281249999994 167.2528862847222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,1432,879.017578125) translate(0 199.84116753472222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,1432,879.017578125) translate(0 199.84116753472222)"/>
                                     <use xlink:href="#C"
                                          transform="matrix(1,0,0,1,1432,879.017578125) translate(16.63606770833333 199.84116753472222)"/>
                                     <use xlink:href="#f"
@@ -820,56 +930,64 @@
                                          transform="matrix(1,0,0,1,2168,-208.33333333333326) translate(140.21256510416666 70.52376302083334)"/>
                                 </g>
                                 <g>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 72.60562065972223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 72.60562065972223)"/>
                                     <use xlink:href="#e"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 72.60562065972223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(42.12717013888888 72.60562065972223)"/>
                                     <use xlink:href="#g"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(54.90559895833332 72.60562065972223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 105.19390190972223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 105.19390190972223)"/>
                                     <use xlink:href="#D"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 105.19390190972223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(78.04047309027776 105.19390190972223)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(90.8189019097222 105.19390190972223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 137.78218315972222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 137.78218315972222)"/>
                                     <use xlink:href="#F"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 137.78218315972222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(141.9216579861111 137.78218315972222)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(154.70008680555551 137.78218315972222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 170.37046440972222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 170.37046440972222)"/>
                                     <use xlink:href="#W"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 170.37046440972222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(159.7741970486111 170.37046440972222)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(172.55262586805551 170.37046440972222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 202.9587456597222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 202.9587456597222)"/>
                                     <use xlink:href="#X"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 202.9587456597222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(165.42914496527777 202.9587456597222)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(178.2075737847222 202.9587456597222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 235.5470269097222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 235.5470269097222)"/>
                                     <use xlink:href="#Y"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 235.5470269097222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(69.50325520833331 235.5470269097222)"/>
                                     <use xlink:href="#o"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(82.28168402777776 235.5470269097222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 268.13530815972223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 268.13530815972223)"/>
                                     <use xlink:href="#Z"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 268.13530815972223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(136.33246527777771 268.13530815972223)"/>
                                     <use xlink:href="#q"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(149.11089409722214 268.13530815972223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 300.7235894097222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(0 300.7235894097222)"/>
                                     <use xlink:href="#aa"
                                          transform="matrix(1,0,0,1,2172,-117.31575520833324) translate(16.63606770833333 300.7235894097222)"/>
                                     <use xlink:href="#f"
@@ -880,54 +998,64 @@
                                 <path d="M2160 380h379.5v431H2160z" stroke="#fff" stroke-width="2"/>
                                 <path d="M2160 471.02h379.5" stroke="#fff" stroke-width="2" fill="none"/>
                                 <g>
-                                    <use xlink:href="#z" transform="matrix(1,0,0,1,2168,388) translate(142.55875651041666 20.51204427083333)"/>
-                                    <use xlink:href="#A" transform="matrix(1,0,0,1,2168,388) translate(155.23828125 45.51790364583333)"/>
-                                    <use xlink:href="#ab" transform="matrix(1,0,0,1,2168,388) translate(123.05257161458334 70.52376302083334)"/>
+                                    <use xlink:href="#z"
+                                         transform="matrix(1,0,0,1,2168,388) translate(142.55875651041666 20.51204427083333)"/>
+                                    <use xlink:href="#A"
+                                         transform="matrix(1,0,0,1,2168,388) translate(155.23828125 45.51790364583333)"/>
+                                    <use xlink:href="#ab"
+                                         transform="matrix(1,0,0,1,2168,388) translate(123.05257161458334 70.52376302083334)"/>
                                 </g>
                                 <g>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 72.39976128472225)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 72.39976128472225)"/>
                                     <use xlink:href="#e"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 72.39976128472225)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(42.12717013888888 72.39976128472225)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(54.90559895833332 72.39976128472225)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 104.98804253472224)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 104.98804253472224)"/>
                                     <use xlink:href="#D"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 104.98804253472224)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(78.04047309027776 104.98804253472224)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(90.8189019097222 104.98804253472224)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 137.57632378472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 137.57632378472223)"/>
                                     <use xlink:href="#F"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 137.57632378472223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(141.9216579861111 137.57632378472223)"/>
                                     <use xlink:href="#i"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(154.70008680555551 137.57632378472223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 170.16460503472223)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 170.16460503472223)"/>
                                     <use xlink:href="#W"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 170.16460503472223)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(159.7741970486111 170.16460503472223)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(172.55262586805551 170.16460503472223)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 202.7528862847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 202.7528862847222)"/>
                                     <use xlink:href="#X"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 202.7528862847222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(165.42914496527777 202.7528862847222)"/>
                                     <use xlink:href="#J"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(178.2075737847222 202.7528862847222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 235.34116753472222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 235.34116753472222)"/>
                                     <use xlink:href="#ac"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 235.34116753472222)"/>
                                     <use xlink:href="#f"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(135.4118923611111 235.34116753472222)"/>
                                     <use xlink:href="#v"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(148.19032118055551 235.34116753472222)"/>
-                                    <use xlink:href="#d" transform="matrix(1,0,0,1,2172,479.017578125) translate(0 267.9294487847222)"/>
+                                    <use xlink:href="#d"
+                                         transform="matrix(1,0,0,1,2172,479.017578125) translate(0 267.9294487847222)"/>
                                     <use xlink:href="#aa"
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(16.63606770833333 267.9294487847222)"/>
                                     <use xlink:href="#f"
@@ -936,7 +1064,8 @@
                                          transform="matrix(1,0,0,1,2172,479.017578125) translate(130.21723090277774 267.9294487847222)"/>
                                 </g>
                                 <path d="M993.08 313l425.42-.02" stroke="#fff" fill="none"/>
-                                <path d="M993.1 313.48h-.52v-.96h.5zM1419 313.46h-.5v-.95h.5z" stroke="#fff" stroke-width=".05" fill="#fff"/>
+                                <path d="M993.1 313.48h-.52v-.96h.5zM1419 313.46h-.5v-.95h.5z" stroke="#fff"
+                                      stroke-width=".05" fill="#fff"/>
                                 <g>
                                     <use xlink:href="#ad"
                                          transform="matrix(1,0,0,1,1412.5959553718612,316.9836823798647) translate(0 16.216875)"/>
@@ -947,10 +1076,13 @@
                                     <use xlink:href="#af"
                                          transform="matrix(1,0,0,1,992.199752540838,288.7446348812114) translate(4.708125000000001 16.216875)"/>
                                 </g>
-                                <path d="M1841.5 280.5H1988a12 12 0 0 0 12-12V27.17a12 12 0 0 1 12-12h146.5" stroke="#fff" fill="none"/>
-                                <path d="M1841.5 280.98h-.5v-.96h.5zM2159 15.64h-.5v-.95h.5z" stroke="#fff" stroke-width=".05" fill="#fff"/>
+                                <path d="M1841.5 280.5H1988a12 12 0 0 0 12-12V27.17a12 12 0 0 1 12-12h146.5"
+                                      stroke="#fff" fill="none"/>
+                                <path d="M1841.5 280.98h-.5v-.96h.5zM2159 15.64h-.5v-.95h.5z" stroke="#fff"
+                                      stroke-width=".05" fill="#fff"/>
                                 <g>
-                                    <use xlink:href="#ae" transform="matrix(1,0,0,1,1840.5624316406252,284.5) translate(0 16.216875)"/>
+                                    <use xlink:href="#ae"
+                                         transform="matrix(1,0,0,1,1840.5624316406252,284.5) translate(0 16.216875)"/>
                                     <use xlink:href="#af"
                                          transform="matrix(1,0,0,1,1840.5624316406252,284.5) translate(4.708125000000001 16.216875)"/>
                                 </g>
@@ -958,20 +1090,25 @@
                                     <use xlink:href="#ad"
                                          transform="matrix(1,0,0,1,2152.5956005859375,-9.088079427083258) translate(0 16.216875)"/>
                                 </g>
-                                <path d="M1841.5 280.5H1988a12 12 0 0 1 12 12v291a12 12 0 0 0 12 12h146.5" stroke="#fff" fill="none"/>
-                                <path d="M1841.5 280.98h-.5v-.96h.5zM2159 595.98h-.5V595h.5z" stroke="#fff" stroke-width=".05" fill="#fff"/>
+                                <path d="M1841.5 280.5H1988a12 12 0 0 1 12 12v291a12 12 0 0 0 12 12h146.5" stroke="#fff"
+                                      fill="none"/>
+                                <path d="M1841.5 280.98h-.5v-.96h.5zM2159 595.98h-.5V595h.5z" stroke="#fff"
+                                      stroke-width=".05" fill="#fff"/>
                                 <g>
                                     <use xlink:href="#ad"
                                          transform="matrix(1,0,0,1,2152.5956005859375,571.2452539062499) translate(0 16.216875)"/>
                                 </g>
-                                <path d="M1418.5 960h-200.7a12 12 0 0 1-12-12V325a12 12 0 0 0-12-12H993.07" stroke="#fff" fill="none"/>
-                                <path d="M1419 960.48h-.5v-.96h.5zM993.1 313.48h-.52v-.96h.5z" stroke="#fff" stroke-width=".05" fill="#fff"/>
+                                <path d="M1418.5 960h-200.7a12 12 0 0 1-12-12V325a12 12 0 0 0-12-12H993.07"
+                                      stroke="#fff" fill="none"/>
+                                <path d="M1419 960.48h-.5v-.96h.5zM993.1 313.48h-.52v-.96h.5z" stroke="#fff"
+                                      stroke-width=".05" fill="#fff"/>
                                 <g>
                                     <use xlink:href="#ad"
                                          transform="matrix(1,0,0,1,1412.5956005859375,935.7452539062499) translate(0 16.216875)"/>
                                 </g>
                                 <g>
-                                    <use xlink:href="#ae" transform="matrix(1,0,0,1,992.1375179739586,317) translate(0 16.216875)"/>
+                                    <use xlink:href="#ae"
+                                         transform="matrix(1,0,0,1,992.1375179739586,317) translate(0 16.216875)"/>
                                     <use xlink:href="#af"
                                          transform="matrix(1,0,0,1,992.1375179739586,317) translate(4.708125000000001 16.216875)"/>
                                 </g>
@@ -1005,7 +1142,8 @@
                                           d="M80-144l394-472-394-472h206l401 472-401 472H80zm406 0l394-472-394-472h206l401 472-401 472H486"
                                           id="ao"/>
                                     <g id="a">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#ai"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#ai"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,12.038736979166668,0)"
                                              xlink:href="#aj"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,24.087565104166668,0)"
@@ -1032,10 +1170,12 @@
                                           d="M538 24C308 24 148-78 108-271l171-41c32 123 123 178 257 178 156 0 256-77 256-169 0-77-54-128-164-154l-186-44c-203-48-300-148-300-305 0-192 176-326 414-326 230 0 351 112 402 269l-163 42c-31-80-94-158-238-158-133 0-233 69-233 162 0 83 57 129 188 160l169 40c203 48 298 149 298 302 0 196-179 339-441 339"
                                           id="as"/>
                                     <g id="b">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#ap"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#ap"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,15.096354166666668,0)"
                                              xlink:href="#aq"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.1015625,0)" xlink:href="#ar"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.1015625,0)"
+                                             xlink:href="#ar"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,31.706380208333336,0)"
                                              xlink:href="#as"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,42.61490885416667,0)"
@@ -1054,15 +1194,18 @@
                                           d="M158 0v-1118h174v172h12c41-113 157-188 290-188 26 0 70 2 91 3v181c-11-2-60-10-108-10-161 0-279 109-279 260V0H158"
                                           id="aw"/>
                                     <g id="c">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#at"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,15.37890625,0)" xlink:href="#au"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#at"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,15.37890625,0)"
+                                             xlink:href="#au"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,26.287434895833336,0)"
                                              xlink:href="#av"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,38.336263020833336,0)"
                                              xlink:href="#aw"/>
                                     </g>
                                     <path fill="#fff" d="M798-719v166H144v-166h654" id="ax"/>
-                                    <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ax" id="d"/>
+                                    <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                         xlink:href="#ax" id="d"/>
                                     <path fill="#fff"
                                           d="M158 0v-1118h180V0H158zm91-1301c-68 0-125-53-125-119s57-119 125-119c69 0 126 53 126 119s-57 119-126 119"
                                           id="ay"/>
@@ -1070,14 +1213,16 @@
                                           d="M577 24c-279 0-473-224-473-580 0-354 195-576 474-576 218 0 287 134 324 193h14v-551h180V0H922v-173h-20C865-111 790 24 577 24zm27-161c203 0 314-172 314-421 0-247-108-413-314-413-212 0-317 181-317 413 0 235 108 421 317 421"
                                           id="az"/>
                                     <g id="e">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ay"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#az"/>
                                     </g>
                                     <path fill="#fff"
                                           d="M295 13c-75 0-135-60-135-135s60-135 135-135 135 60 135 135S370 13 295 13zm0-809c-75 0-135-60-135-135s60-135 135-135 135 60 135 135-60 135-135 135"
                                           id="aA"/>
-                                    <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aA" id="f"/>
+                                    <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                         xlink:href="#aA" id="f"/>
                                     <path fill="#ffc66d" d="M338-1490V0H158v-1490h180" id="aB"/>
                                     <path fill="#ffc66d"
                                           d="M613 24c-304 0-509-231-509-576 0-350 205-580 509-580 305 0 511 230 511 580 0 345-206 576-511 576zm0-161c226 0 329-195 329-415 0-222-103-419-329-419-223 0-326 196-326 419 0 220 103 415 326 415"
@@ -1089,7 +1234,8 @@
                                           d="M611 442c-248 0-391-105-460-228l146-94c47 65 117 165 314 165 178 0 307-82 307-266v-224h-17C863-141 792-18 576-18c-268 0-472-195-472-546 0-346 197-568 476-568 216 0 288 133 326 193h17v-179h175V29c0 289-215 413-487 413zm-5-620c203 0 314-146 314-390 0-237-108-403-314-403-213 0-319 180-319 403 0 230 109 390 319 390"
                                           id="aE"/>
                                     <g id="g">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aB"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aB"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aC"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,18.89366319444444,0)"
@@ -1110,7 +1256,8 @@
                                           d="M158 0v-1118h175l1 205c55-151 181-225 313-225 147 0 245 90 285 228 53-141 190-228 352-228 194 0 352 125 352 384V0h-181v-749c0-161-105-225-225-225-151 0-243 103-243 244V0H807v-767c0-124-93-207-219-207-131 0-250 92-250 270V0H158"
                                           id="aI"/>
                                     <g id="h">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aF"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aF"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.271592881944441,0)"
                                              xlink:href="#au"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.11848958333333,0)"
@@ -1139,7 +1286,8 @@
                                           d="M158 0v-1118h180V0H158zm91-1301c-68 0-125-53-125-119s57-119 125-119c69 0 126 53 126 119s-57 119-126 119"
                                           id="aM"/>
                                     <g id="i">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aJ"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aJ"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,11.846896701388886,0)"
                                              xlink:href="#aK"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,19.18956163194444,0)"
@@ -1161,7 +1309,8 @@
                                           d="M180 0v-1490h224l606 953c40 63 108 177 176 312-27-437-7-821-13-1265h190V0h-226C860-448 622-778 356-1262c27 476 11 792 15 1262H180"
                                           id="aP"/>
                                     <g id="j">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aN"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aN"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,8.307074652777775,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
@@ -1181,7 +1330,8 @@
                                     </g>
                                     <path fill="#fff" d="M338-1490V0H158v-1490h180" id="aQ"/>
                                     <g id="k">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aQ"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aQ"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,18.038845486111107,0)"
@@ -1198,7 +1348,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="l">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#av"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.08528645833333,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,32.74609374999999,0)"
@@ -1218,7 +1369,8 @@
                                           d="M613 24c-304 0-509-231-509-576 0-350 205-580 509-580 305 0 511 230 511 580 0 345-206 576-511 576zm0-161c226 0 329-195 329-415 0-222-103-419-329-419-223 0-326 196-326 419 0 220 103 415 326 415"
                                           id="aT"/>
                                     <g id="m">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aR"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aR"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.962022569444443,0)"
                                              xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.565104166666664,0)"
@@ -1244,7 +1396,8 @@
                                           d="M338-670V0H158v-1490h180v566c73-149 190-208 336-208 226 0 379 139 379 422V0H872v-695c0-172-96-275-252-275-161 0-282 109-282 300"
                                           id="aW"/>
                                     <g id="n">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#az"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#az"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.34592013888889,0)"
@@ -1276,7 +1429,8 @@
                                           d="M628 24c-324 0-524-230-524-574 0-343 198-582 503-582 237 0 487 146 487 559v75H286c9 234 145 362 343 362 132 0 231-58 273-172l174 48C1024-91 857 24 628 24zM287-650h624c-17-190-120-322-304-322-192 0-309 151-320 322"
                                           id="aZ"/>
                                     <g id="o">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aX"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aX"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aY"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.34592013888889,0)"
@@ -1294,7 +1448,8 @@
                                           d="M52 0l541-1490h220L1361 0h-200l-149-416H398L254 0H52zm404-582h497c-103-290-145-390-251-756-108 377-145 460-246 756"
                                           id="bc"/>
                                     <g id="p">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aH"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,12.60308159722222,0)"
                                              xlink:href="#ba"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.425347222222218,0)"
@@ -1330,7 +1485,8 @@
                                           d="M158 0v-1118h175l1 205c55-151 181-225 313-225 147 0 245 90 285 228 53-141 190-228 352-228 194 0 352 125 352 384V0h-181v-749c0-161-105-225-225-225-151 0-243 103-243 244V0H807v-767c0-124-93-207-219-207-131 0-250 92-250 270V0H158"
                                           id="bd"/>
                                     <g id="q">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aX"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aX"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aY"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.34592013888889,0)"
@@ -1347,7 +1503,8 @@
                                              xlink:href="#aZ"/>
                                     </g>
                                     <g id="r">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aw"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aw"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,8.07693142361111,0)"
                                              xlink:href="#aT"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,21.534830729166664,0)"
@@ -1360,7 +1517,8 @@
                                     <path fill="#fff" d="M226 279v-1860h398v153H398V126h226v153H226" id="be"/>
                                     <path fill="#fff" d="M123 279V126h226v-1554H123v-153h398V279H123" id="bf"/>
                                     <g id="s">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aJ"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aJ"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,11.846896701388886,0)"
                                              xlink:href="#aK"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,19.18956163194444,0)"
@@ -1376,10 +1534,12 @@
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,68.63747829861109,0)"
                                              xlink:href="#bf"/>
                                     </g>
-                                    <path fill="#fff" d="M600 0L52-1490h200c166 485 304 806 458 1336 156-533 285-846 449-1336h202L819 0H600"
+                                    <path fill="#fff"
+                                          d="M600 0L52-1490h200c166 485 304 806 458 1336 156-533 285-846 449-1336h202L819 0H600"
                                           id="bg"/>
                                     <g id="t">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aH"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,12.60308159722222,0)"
                                              xlink:href="#aQ"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,18.038845486111107,0)"
@@ -1404,7 +1564,8 @@
                                              xlink:href="#au"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,147.37934027777777,0)"
                                              xlink:href="#au"/>
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,158.20703125,0)" xlink:href="#bg"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,158.20703125,0)"
+                                             xlink:href="#bg"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,173.6923828125,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,179.12814670138889,0)"
@@ -1416,7 +1577,8 @@
                                           d="M677 24c-213 0-288-135-325-197h-20V0H158v-1490h180v551h14c37-59 106-193 324-193 279 0 474 222 474 576 0 356-194 580-473 580zm-27-161c209 0 317-186 317-421 0-232-105-413-317-413-206 0-314 166-314 413 0 249 111 421 314 421"
                                           id="bh"/>
                                     <g id="u">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#av"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.08528645833333,0)"
                                              xlink:href="#aG"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.345920138888882,0)"
@@ -1434,7 +1596,8 @@
                                           d="M677 24c-213 0-288-135-325-197h-20V0H158v-1490h180v551h14c37-59 106-193 324-193 279 0 474 222 474 576 0 356-194 580-473 580zm-27-161c209 0 317-186 317-421 0-232-105-413-317-413-206 0-314 166-314 413 0 249 111 421 314 421"
                                           id="bi"/>
                                     <g id="v">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bi"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bi"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aC"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,27.200737847222214,0)"
@@ -1452,7 +1615,8 @@
                                           d="M611 442c-248 0-391-105-460-228l146-94c47 65 117 165 314 165 178 0 307-82 307-266v-224h-17C863-141 792-18 576-18c-268 0-472-195-472-546 0-346 197-568 476-568 216 0 288 133 326 193h17v-179h175V29c0 289-215 413-487 413zm-5-620c203 0 314-146 314-390 0-237-108-403-314-403-213 0-319 180-319 403 0 230 109 390 319 390"
                                           id="bj"/>
                                     <g id="w">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bj"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bj"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.764756944444441,0)"
                                              xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.85004340277777,0)"
@@ -1465,14 +1629,16 @@
                                              xlink:href="#aw"/>
                                     </g>
                                     <g id="x">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bh"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bh"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,19.17860243055555,0)"
                                              xlink:href="#aT"/>
                                     </g>
                                     <g id="y">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aJ"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aJ"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,11.846896701388886,0)"
                                              xlink:href="#aK"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,19.18956163194444,0)"
@@ -1485,7 +1651,8 @@
                                              xlink:href="#aE"/>
                                     </g>
                                     <g id="z">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#ai"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#ai"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,12.038736979166668,0)"
                                              xlink:href="#aj"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,24.087565104166668,0)"
@@ -1502,10 +1669,12 @@
                                              xlink:href="#ao"/>
                                     </g>
                                     <g id="A">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#ap"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#ap"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,15.096354166666668,0)"
                                              xlink:href="#aq"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.1015625,0)" xlink:href="#ar"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.1015625,0)"
+                                             xlink:href="#ar"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,31.706380208333336,0)"
                                              xlink:href="#as"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,42.61490885416667,0)"
@@ -1513,8 +1682,10 @@
                                     </g>
                                     <path fill="#fff" d="M98-1322v-168h1126v168H757V0H567v-1322H98" id="bk"/>
                                     <g id="B">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#bk"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,12.169921875,0)" xlink:href="#aw"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#bk"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,12.169921875,0)"
+                                             xlink:href="#aw"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.273111979166668,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,25.2783203125,0)"
@@ -1522,7 +1693,8 @@
                                     </g>
                                     <path fill="#fff" d="M370-1490V0H180v-1490h190" id="bl"/>
                                     <g id="C">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aF"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aF"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.271592881944441,0)"
                                              xlink:href="#au"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.11848958333333,0)"
@@ -1535,7 +1707,8 @@
                                              xlink:href="#az"/>
                                     </g>
                                     <g id="D">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aO"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aO"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,7.342664930555554,0)"
                                              xlink:href="#aw"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,16.14290364583333,0)"
@@ -1548,7 +1721,8 @@
                                              xlink:href="#az"/>
                                     </g>
                                     <g id="E">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#az"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#az"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.828124999999993,0)"
@@ -1571,7 +1745,8 @@
                                              xlink:href="#aG"/>
                                     </g>
                                     <g id="F">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#az"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#az"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.828124999999993,0)"
@@ -1597,7 +1772,8 @@
                                           d="M645 0H180v-1490h484c435 0 692 280 692 742 0 466-257 748-711 748zM370-168h263c363 0 539-218 539-580 0-358-176-574-521-574H370v1154"
                                           id="bm"/>
                                     <g id="G">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#au"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#au"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,11.846896701388886,0)"
                                              xlink:href="#aO"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,19.29915364583333,0)"
@@ -1616,7 +1792,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="H">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#av"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#av"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.08528645833333,0)"
                                              xlink:href="#aG"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.345920138888882,0)"
@@ -1630,12 +1807,14 @@
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,76.01302083333331,0)"
                                              xlink:href="#av"/>
                                     </g>
-                                    <path fill="#fff" d="M180 0v-1490h190v644h782v-644h190V0h-190v-678H370V0H180" id="bn"/>
+                                    <path fill="#fff" d="M180 0v-1490h190v644h782v-644h190V0h-190v-678H370V0H180"
+                                          id="bn"/>
                                     <path fill="#fff"
                                           d="M140 405l46-156c120 36 205 19 263-150l32-93L54-1118h197c107 313 237 620 324 950 87-331 219-637 326-950h196L606 167c-68 178-176 259-334 259-64 0-113-12-132-21"
                                           id="bo"/>
                                     <g id="I">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bh"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bh"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aF"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,27.014431423611104,0)"
@@ -1697,7 +1876,8 @@
                                           id="bw"/>
                                     <path fill="#dedeff" d="M338-1490V0H158v-1490h180" id="bx"/>
                                     <g id="J">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bp"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bp"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,14.685329861111107,0)"
                                              xlink:href="#bq"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,20.121093749999993,0)"
@@ -1719,7 +1899,8 @@
                                     </g>
                                     <path fill="#fff" d="M180 0v-1490h190v1322h690V0H180" id="by"/>
                                     <g id="K">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bh"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bh"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aF"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,27.014431423611104,0)"
@@ -1758,7 +1939,8 @@
                                              xlink:href="#bo"/>
                                     </g>
                                     <g id="L">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aW"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aW"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.271592881944441,0)"
                                              xlink:href="#aT"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.729492187499993,0)"
@@ -1791,7 +1973,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="M">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aT"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aT"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.457899305555552,0)"
                                              xlink:href="#ba"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.49934895833333,0)"
@@ -1824,7 +2007,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="N">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aO"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aO"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,7.342664930555554,0)"
                                              xlink:href="#aw"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,16.14290364583333,0)"
@@ -1855,7 +2039,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="O">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aX"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aX"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aY"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.34592013888889,0)"
@@ -1864,7 +2049,8 @@
                                              xlink:href="#aZ"/>
                                     </g>
                                     <g id="P">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#bl"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#bl"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,5.550130208333334,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,23.653645833333336,0)"
@@ -1875,7 +2061,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="Q">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ay"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.09657118055555,0)"
@@ -1894,7 +2081,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="R">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ay"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.09657118055555,0)"
@@ -1913,7 +2101,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="S">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ay"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.09657118055555,0)"
@@ -1947,7 +2136,8 @@
                                           d="M538 24C308 24 148-78 108-271l171-41c32 123 123 178 257 178 156 0 256-77 256-169 0-77-54-128-164-154l-186-44c-203-48-300-148-300-305 0-192 176-326 414-326 230 0 351 112 402 269l-163 42c-31-80-94-158-238-158-133 0-233 69-233 162 0 83 57 129 188 160l169 40c203 48 298 149 298 302 0 196-179 339-441 339"
                                           id="bD"/>
                                     <g id="T">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#bz"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#bz"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.304470486111109,0)"
                                              xlink:href="#bA"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.24728732638889,0)"
@@ -1958,7 +2148,8 @@
                                              xlink:href="#bD"/>
                                     </g>
                                     <g id="U">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aB"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aB"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,5.4357638888888875,0)"
                                              xlink:href="#aC"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,18.89366319444444,0)"
@@ -1966,12 +2157,14 @@
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,32.15429687499999,0)"
                                              xlink:href="#aE"/>
                                     </g>
-                                    <path fill="#fff" d="M180 0v-1490h908v168H370v486h669v168H370v500h727V0H180" id="bE"/>
+                                    <path fill="#fff" d="M180 0v-1490h908v168H370v486h669v168H370v500h727V0H180"
+                                          id="bE"/>
                                     <path fill="#fff"
                                           d="M65 0l393-574-370-544h210c88 136 192 297 267 435 67-142 176-302 264-435h206L661-564 1053 0H844c-94-144-206-310-287-458C484-308 366-142 273 0H65"
                                           id="bF"/>
                                     <g id="V">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#bE"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#bE"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,12.422200520833334,0)"
                                              xlink:href="#bF"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,23.7041015625,0)"
@@ -1986,7 +2179,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="W">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aH"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,12.60308159722222,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,32.26388888888888,0)"
@@ -2009,7 +2203,8 @@
                                              xlink:href="#aQ"/>
                                     </g>
                                     <g id="X">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aH"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,12.60308159722222,0)"
                                              xlink:href="#aI"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,32.26388888888888,0)"
@@ -2030,7 +2225,8 @@
                                              xlink:href="#av"/>
                                     </g>
                                     <g id="Y">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#az"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#az"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,26.34592013888889,0)"
@@ -2042,7 +2238,8 @@
                                           d="M657 26c-323 0-524-166-541-416h195c15 169 171 246 346 246 202 0 356-106 356-265 5-203-294-238-475-293-239-73-380-191-380-389 0-252 224-419 512-419 294 0 499 171 508 396H992c-17-145-151-228-328-228-193 0-321 102-321 242 0 156 175 211 284 241l149 41c160 44 422 134 422 412 0 244-197 432-541 432"
                                           id="bG"/>
                                     <g id="Z">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aO"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aO"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,7.342664930555554,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,12.778428819444441,0)"
@@ -2061,7 +2258,8 @@
                                              xlink:href="#aR"/>
                                     </g>
                                     <g id="aa">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#ba"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#ba"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.041449652777775,0)"
                                              xlink:href="#aH"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,25.644531249999993,0)"
@@ -2081,13 +2279,16 @@
                                           d="M458 0L52-1490h194c108 439 233 855 324 1313 92-459 221-873 331-1313h216c110 438 234 854 330 1307 92-455 216-869 323-1307h196L1558 0h-221l-256-944c-26-95-50-200-73-331-22 122-44 223-73 331L680 0H458"
                                           id="bH"/>
                                     <g id="ab">
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)" xlink:href="#bH"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,0,0)"
+                                             xlink:href="#bH"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,20.363932291666668,0)"
                                              xlink:href="#ay"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,25.369140625,0)" xlink:href="#au"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,25.369140625,0)"
+                                             xlink:href="#au"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,36.277669270833336,0)"
                                              xlink:href="#aW"/>
-                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,48.498046875,0)" xlink:href="#aQ"/>
+                                        <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,48.498046875,0)"
+                                             xlink:href="#aQ"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,53.503255208333336,0)"
                                              xlink:href="#ay"/>
                                         <use transform="matrix(0.010091145833333334,0,0,0.010091145833333334,58.50846354166667,0)"
@@ -2104,7 +2305,8 @@
                                              xlink:href="#aI"/>
                                     </g>
                                     <g id="ac">
-                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)" xlink:href="#aR"/>
+                                        <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,0,0)"
+                                             xlink:href="#aR"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,13.742838541666664,0)"
                                              xlink:href="#aF"/>
                                         <use transform="matrix(0.010959201388888886,0,0,0.010959201388888886,27.014431423611104,0)"
@@ -2123,16 +2325,20 @@
                                              xlink:href="#az"/>
                                     </g>
                                     <path fill="#0c0" d="M653-1490V0H466v-1314h-10L96-1047v-204l324-239h233" id="bI"/>
-                                    <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,0,0)" xlink:href="#bI" id="ad"/>
+                                    <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,0,0)"
+                                         xlink:href="#bI" id="ad"/>
                                     <path fill="#0c0"
                                           d="M646 20c-332 0-524-278-524-764 0-483 194-766 524-766s524 283 524 766c0 485-191 764-524 764zm0-166c218 0 341-220 341-598 0-380-123-601-341-601s-341 222-341 601c0 378 123 598 341 598"
                                           id="bJ"/>
-                                    <path fill="#0c0" d="M295 13c-75 0-135-60-135-135s60-135 135-135 135 60 135 135S370 13 295 13" id="bK"/>
+                                    <path fill="#0c0"
+                                          d="M295 13c-75 0-135-60-135-135s60-135 135-135 135 60 135 135S370 13 295 13"
+                                          id="bK"/>
                                     <path fill="#0c0"
                                           d="M441-652l13-317-268 171-72-126 282-146-282-146 72-128 268 171-13-317h144l-12 317 267-171 72 128-282 146 282 146-72 126-267-171 12 317H441"
                                           id="bL"/>
                                     <g id="af">
-                                        <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,0,0)" xlink:href="#bJ"/>
+                                        <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,0,0)"
+                                             xlink:href="#bJ"/>
                                         <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,10.135546875000001,0)"
                                              xlink:href="#bK"/>
                                         <use transform="matrix(0.008173828125000001,0,0,0.008173828125000001,14.958105468750002,0)"
@@ -2141,7 +2347,8 @@
                                              xlink:href="#bL"/>
                                     </g>
                                     <g id="ah">
-                                        <use transform="matrix(0.008680555555555556,0,0,0.008680555555555556,0,0)" xlink:href="#bJ"/>
+                                        <use transform="matrix(0.008680555555555556,0,0,0.008680555555555556,0,0)"
+                                             xlink:href="#bJ"/>
                                         <use transform="matrix(0.008680555555555556,0,0,0.008680555555555556,10.76388888888889,0)"
                                              xlink:href="#bK"/>
                                         <use transform="matrix(0.008680555555555556,0,0,0.008680555555555556,15.885416666666668,0)"
@@ -2152,14 +2359,17 @@
                                 </defs>
                             </g>
                         </svg>
-                        <a class="svg-open-link" href="#svgLightbox" aria-label="Open diagram in lightbox" role="button">View larger diagram</a>
+                        <a class="svg-open-link" href="#svgLightbox" aria-label="Open diagram in lightbox"
+                           role="button">View larger diagram</a>
                     </div>
 
-                    <div id="svgLightbox" class="svg-lightbox" role="dialog" aria-modal="true" aria-label="Diagram lightbox">
+                    <div id="svgLightbox" class="svg-lightbox" role="dialog" aria-modal="true"
+                         aria-label="Diagram lightbox">
                         <a class="svg-lightbox__close" href="#triptally-container-svg" aria-label="Close diagram">✕</a>
 
                         <div class="svg-lightbox__content" role="document">
-                            <img class="svg-lightbox__img" src="./source/img/UML_class_diagram.svg" alt="Triptally workflow diagram large">
+                            <img class="svg-lightbox__img" src="./source/img/UML_class_diagram.svg"
+                                 alt="Triptally workflow diagram large">
                         </div>
                     </div>
 
@@ -2169,7 +2379,8 @@
                     <h3>Triptally</h3>
                     <p>
                         Triptally was part of my back-end curriculum during my Software Development bachelor program.
-                        The project focused on building a full back-end application using Java, Spring Boot, and PostgreSQL.
+                        The project focused on building a full back-end application using Java, Spring Boot, and
+                        PostgreSQL. <a href="https://github.com/I-Like-Sushi/TripTally" target="_blank">Click here for the repository</a>
                     </p>
                 </div>
             </div>
@@ -2198,7 +2409,8 @@
                     <h3>Anilytics</h3>
                     <p>
                         Anilytics was a front-end focused project where I worked with React and modern web technologies.
-                        It taught me how abstraction can speed up development—but also why understanding fundamentals matters.
+                        It taught me how abstraction can speed up development—but also why understanding fundamentals
+                        matters. <br><a href="https://github.com/I-Like-Sushi/Anilytics" target="_blank">Click here for the repository</a>
                     </p>
                 </div>
             </div>
@@ -2207,12 +2419,35 @@
     </section>
 
 </main>
-<footer>
-    <div>
-        <img src="./source/img/programming/github-icon.svg" id="github-icon" alt="Github Icon"/>
-        <a href="https://github.com/I-Like-Sushi" id="github-link" target="_blank">My Github</a>
-        <!-- LinkedIn -->
+<footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+        <div class="site-footer__brand">
+
+            <div class="site-footer__meta">
+                <p class="site-footer__name">Deniz — Fullstack Systems Developer</p>
+                <p class="site-footer__tag">C · Linux · Fullstack Embedded</p>
+            </div>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer">
+            <ul class="site-footer__list">
+                <li><a href="https://github.com/I-Like-Sushi/" class="site-footer__logo" aria-label="Home">
+                    <img src="./source/img/programming/github-icon.svg" alt="GitHub icon" class="site-footer__icon">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/deniz-tutak-7bbbb8114/" class="site-footer__logo"
+                       aria-label="Home">
+                    <img src="./source/img/linkedin-icon.svg" alt="GitHub icon" class="site-footer__icon">
+                </a></li>
+                <li><a class="btn-ghost site-footer__cta" id="btn-email-me" href="mailto:deniz.tutak@hotmail.com">Email
+                    me</a></li>
+            </ul>
+        </nav>
+
+        <div class="site-footer__contact">
+            <p class="site-footer__copyright">© <span id="year"></span> Deniz. All rights reserved.</p>
+        </div>
     </div>
 </footer>
+
 </body>
 </html>
