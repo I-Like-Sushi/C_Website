@@ -639,6 +639,13 @@ a:link {
     text-decoration: none;
 }
 
+#anilytics-link {
+    color: #00A6D6;
+}
+
+#anilytics-link:hover {
+    color: limegreen;
+}
 
 @media (max-width: 900px) {
     #website-workflow-svg {
