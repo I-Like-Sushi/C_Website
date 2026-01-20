@@ -42,16 +42,16 @@ html {
 }
 
 body {
-    height: auto !important; /* remove any calc(100vh - X) constraint */
+    height: auto !important;
     min-height: 100%;
-    overflow: visible !important; /* body must not be the scroller */
+    overflow: visible !important;
 }
 
 /* ---------- Cross-browser scrollbar styling ---------- */
 /* Firefox */
 html {
     scrollbar-width: thin;
-    scrollbar-color: var(--sb-thumb) var(--sb-track); /* thumb, track */
+    scrollbar-color: var(--sb-thumb) var(--sb-track);
 }
 
 /* WebKit (Chrome, Edge, Safari) */
@@ -167,18 +167,45 @@ html::-webkit-scrollbar-thumb:focus {
     border-radius: 6px;
 }
 
+#menuButton {
+    display: none;
+    width: 44px;
+    height: 44px;
+}
+
+#menu {
+    width: 100%;
+    height: 100%;
+}
+
+#menu_2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: linear-gradient(180deg, #05010f 0%, #0a0220 100%);
+    padding: 1.5rem;
+    translate: 100% 0;
+    transition: translate 0.3s ease;
+    z-index: 999;
+}
+
+#menu_2:popover-open {
+    translate: 0 0;
+}
+
+
 @media (max-width: 575px) {
+
     .site-nav__container {
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
     }
 
-    .site-nav__brand {
-        flex: 0 0 100%;
-        margin-bottom: 8px;
-    }
-
     .site-nav__links {
+        display: none;
         width: 100%;
     }
 
@@ -187,14 +214,25 @@ html::-webkit-scrollbar-thumb:focus {
         gap: 12px;
         flex-wrap: wrap;
         margin-left: 0;
-        padding-bottom: 8px;
+        padding: 12px 0;
+        background: linear-gradient(180deg, #05010f 0%, #0a0220 100%);
     }
 
     .site-nav__link {
-        padding: 10px 12px;
-        font-size: 15px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    #menuButton {
+        display: flex;
+        margin-left: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }
+
+
 
 @media (hover: none) and (pointer: coarse) {
     .site-nav__link {
@@ -205,9 +243,6 @@ html::-webkit-scrollbar-thumb:focus {
 
 /*------- header -------*/
 
-/* =========================
-   Base / existing rules
-   ========================= */
 
 .electric-blue-fade {
     background: linear-gradient(
@@ -253,21 +288,23 @@ html::-webkit-scrollbar-thumb:focus {
     min-width: 260px;
     color: #e8ecff;
 }
+
 .hero-copy h1 {
     font-size: 2.4rem;
     line-height: 1.05;
     margin-bottom: .4rem;
     font-family: "Exo 2", sans-serif;
 }
+
 .hero-copy .role {
-    color: rgba(232,236,255,0.85);
+    color: rgba(232, 236, 255, 0.85);
     margin-bottom: .6rem;
     font-weight: 500;
 }
 
 .hero-copy .lead {
     margin-bottom: 1rem;
-    color: rgba(232,236,255,0.92);
+    color: rgba(232, 236, 255, 0.92);
     font-size: 1.05rem;
 }
 
@@ -282,42 +319,46 @@ html::-webkit-scrollbar-thumb:focus {
 /* Primary CTA (kept from your rules) */
 .btn-primary {
     display: inline-block;
-    background: rgb(0,200,255);
+    background: rgb(0, 200, 255);
     color: #00121a;
     padding: .7rem 1.1rem;
     border-radius: 10px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,200,255,0.12);
+    box-shadow: 0 6px 20px rgba(0, 200, 255, 0.12);
     transition: transform .12s ease, box-shadow .12s ease;
 }
+
 .btn-primary:hover,
 .btn-primary:focus {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,200,255,0.18);
+    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.18);
 }
+
 .btn-primary:focus-visible {
-    outline: 3px solid rgba(0,200,255,0.18);
+    outline: 3px solid rgba(0, 200, 255, 0.18);
     outline-offset: 3px;
 }
 
 /* Secondary / ghost CTA */
 .btn-ghost {
     background: transparent;
-    color: rgba(0,200,255,0.95);
+    color: rgba(0, 200, 255, 0.95);
     padding: .6rem .9rem;
     border-radius: 8px;
     text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     transition: background .12s ease, transform .12s ease;
 }
+
 .btn-ghost:hover,
 .btn-ghost:focus {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     transform: translateY(-2px);
 }
+
 .btn-ghost:focus-visible {
-    box-shadow: 0 0 0 3px rgba(0,200,255,0.12);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.12);
     border-radius: 8px;
 }
 
@@ -328,7 +369,7 @@ html::-webkit-scrollbar-thumb:focus {
 /* hint text under actions */
 .hint {
     margin-top: .9rem;
-    color: rgba(232,236,255,0.7);
+    color: rgba(232, 236, 255, 0.7);
     font-size: .95rem;
 }
 
@@ -341,13 +382,14 @@ html::-webkit-scrollbar-thumb:focus {
     height: 1px;
     overflow: hidden;
 }
+
 .skip-link:focus {
     left: 1rem;
     top: 1rem;
     width: auto;
     height: auto;
     padding: .5rem .75rem;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: #00c8ff;
     border-radius: 6px;
     z-index: 2000;
@@ -358,13 +400,25 @@ html::-webkit-scrollbar-thumb:focus {
     .typed .text,
     .typed .cursor,
     .btn-primary,
-    .btn-ghost { animation: none !important; transition: none !important; }
+    .btn-ghost {
+        animation: none !important;
+        transition: none !important;
+    }
 }
 
 @media (max-width: 800px) {
-    .header-inner-container { flex-direction: column; text-align: center; }
-    .hero-copy h1 { font-size: 1.8rem; }
-    .hero-actions { justify-content: center; }
+    .header-inner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-copy h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
 }
 
 
@@ -726,9 +780,9 @@ a:link {
 :root {
     --footer-bg-top: #05010f;
     --footer-bg-bottom: #0a0220;
-    --muted: rgba(232,236,255,0.72);
+    --muted: rgba(232, 236, 255, 0.72);
     --accent: #00c8ff;
-    --accent-strong: rgba(0,200,255,0.12);
+    --accent-strong: rgba(0, 200, 255, 0.12);
 }
 
 /* Footer base */
@@ -738,7 +792,7 @@ a:link {
     color: #e8ecff;
     padding: 2rem 1rem;
     box-sizing: border-box;
-    border-top: 1px solid rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* Inner layout */
@@ -760,18 +814,35 @@ a:link {
     align-items: center;
     min-width: 220px;
 }
+
 .site-footer__icon {
     width: 44px;
     height: 44px;
     display: block;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6));
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
 }
-.site-footer__meta { line-height: 1.05; }
-.site-footer__name { font-weight: 700; margin: 0; font-family: "Exo 2", sans-serif; }
-.site-footer__tag { margin: 0; color: var(--muted); font-size: .92rem; }
+
+.site-footer__meta {
+    line-height: 1.05;
+}
+
+.site-footer__name {
+    font-weight: 700;
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+.site-footer__tag {
+    margin: 0;
+    color: var(--muted);
+    font-size: .92rem;
+}
 
 /* Nav links */
-.site-footer__nav { margin: 0; }
+.site-footer__nav {
+    margin: 0;
+}
+
 .site-footer__list {
     display: flex;
     gap: 1rem;
@@ -780,6 +851,7 @@ a:link {
     padding: 0;
     align-items: center;
 }
+
 .site-footer__link {
     color: var(--accent);
     text-decoration: none;
@@ -787,51 +859,83 @@ a:link {
     border-radius: 8px;
     transition: background .12s ease, transform .12s ease;
 }
+
 .site-footer__link:hover,
 .site-footer__link:focus {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     transform: translateY(-2px);
 }
+
 .site-footer__link:focus-visible {
-    box-shadow: 0 0 0 3px rgba(0,200,255,0.12);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.12);
     border-radius: 8px;
 }
 
 /* Contact / CTA */
-.site-footer__contact { display: flex; gap: 1rem; align-items: center; min-width: 220px; }
+.site-footer__contact {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    min-width: 220px;
+}
+
 .site-footer__cta {
     background: transparent;
     color: var(--accent);
-    border: 1px solid rgba(255,255,255,0.04);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     padding: .5rem .8rem;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
 }
+
 .site-footer__cta:hover,
 .site-footer__cta:focus {
     background: var(--accent-strong);
     color: #00121a;
     transform: translateY(-2px);
 }
-.site-footer__cta:focus-visible { outline: 3px solid rgba(0,200,255,0.14); outline-offset: 3px; }
+
+.site-footer__cta:focus-visible {
+    outline: 3px solid rgba(0, 200, 255, 0.14);
+    outline-offset: 3px;
+}
 
 /* Copyright */
-.site-footer__copyright { margin: 0; color: var(--muted); font-size: .92rem; }
+.site-footer__copyright {
+    margin: 0;
+    color: var(--muted);
+    font-size: .92rem;
+}
 
 /* Responsive: stack on small screens */
 @media (max-width: 720px) {
-    .site-footer__inner { flex-direction: column; align-items: stretch; gap: 1rem; text-align: center; }
-    .site-footer__brand, .site-footer__contact { justify-content: center; }
-    .site-footer__list { justify-content: center; flex-wrap: wrap; gap: .6rem; }
+    .site-footer__inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .site-footer__brand, .site-footer__contact {
+        justify-content: center;
+    }
+
+    .site-footer__list {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .6rem;
+    }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .site-footer__link,
-    .site-footer__cta { transition: none; transform: none; }
+    .site-footer__cta {
+        transition: none;
+        transform: none;
+    }
 }
-
 
 
 /*------- et cetera -------*/
@@ -950,7 +1054,10 @@ a:link {
     vector-effect: none !important;
 }
 
-#website-workflow-svg rect { fill: none !important; stroke: #ffffff !important; }
+#website-workflow-svg rect {
+    fill: none !important;
+    stroke: #ffffff !important;
+}
 
 #website-workflow-svg marker polygon,
 #website-workflow-svg marker path {

@@ -15,22 +15,31 @@
 
         <div class="site-nav__links" id="siteMainNav" role="menubar" aria-labelledby="siteBrand">
             <ul class="site-nav__list" role="menu">
-                <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#section-about-me">About me</a>
-                </li>
-                <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#this-website-diagram">This website</a>
-                </li>
-                <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#project-triptally">Triptally</a>
-                </li>
-                <li class="site-nav__item" role="none">
-                    <a class="site-nav__link" role="menuitem" href="#project-row">Anilytics</a>
-                </li>
+                <li class="site-nav__item"><a class="site-nav__link" href="#section-about-me" >About me</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="#this-website-diagram">This website</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="#project-triptally">Triptally</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="#project-row">Anilytics</a></li>
+            </ul>
+        </div>
+
+        <button id="menuButton" popovertarget="menu_2" popovertargetaction="toggle">
+            <svg id="menu" viewBox="0 0 24 24">
+                <path d="M3,12H21M9,18H21M3,6H15"
+                      style="fill:none;stroke:white;stroke-width:2;stroke-linecap:round"></path>
+            </svg>
+        </button>
+
+        <div popover id="menu_2" role="menu">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="#section-about-me" popovertarget="menu_2" popovertargetaction="hide">About me</a></li>
+                <li><a class="site-nav__link" href="#this-website-diagram" popovertarget="menu_2" popovertargetaction="hide">This website</a></li>
+                <li><a class="site-nav__link" href="#project-triptally" popovertarget="menu_2" popovertargetaction="hide">Triptally</a></li>
+                <li><a class="site-nav__link" href="#project-row" popovertarget="menu_2" popovertargetaction="hide">Anilytics</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 
 <header class="electric-blue-fade" role="banner">
