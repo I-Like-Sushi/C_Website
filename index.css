@@ -395,7 +395,6 @@ html::-webkit-scrollbar-thumb:focus {
     z-index: 2000;
 }
 
-/* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .typed .text,
     .typed .cursor,
